@@ -164,13 +164,22 @@
   .card p{color:var(--text-2); font-size:15px; margin-top:6px; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;}
   .card .go{margin-top:10px; font-weight:650; font-size:15px; align-self:start; border-bottom:2px solid var(--accent);}
   .card[hidden]{display:none;}
-  /* A wide card fills what would otherwise be a lone card on the last row:
-     image on the left at its normal shape, text on the right. */
-  .card.wide{grid-column:span 2; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); column-gap:24px; align-content:start;}
-  .card.wide .frame{grid-column:1; grid-row:1 / span 6; align-self:start;}
-  .card.wide > :not(.frame){grid-column:2;}
-  .card.wide .meta-line{margin-top:0;}
-  .card.wide p{-webkit-line-clamp:6;}
+  .card .body, .card .meta-line, .card .who{display:block;}
+  .card .go{display:inline-block;}
+  /* A wide "spotlight" card fills what would otherwise be a lone card on the last row.
+     The image fills the card at the row's full height; the text sits on a dark fade over it. */
+  .card.wide{grid-column:span 2; position:relative; display:block; min-height:380px; border:2px solid var(--edge); background:#000; overflow:hidden; transition:border-color .2s;}
+  .card.wide:hover{border-color:var(--accent);}
+  .card.wide .frame{position:absolute; inset:0; border:none;}
+  .card.wide .frame img{height:100%; aspect-ratio:auto;}
+  .card.wide .body{position:absolute; left:0; right:0; bottom:0; padding:72px 24px 22px; background:linear-gradient(to top, rgba(8,10,12,.94) 35%, rgba(8,10,12,.65) 70%, rgba(8,10,12,0));}
+  .card.wide .meta-line{margin-top:0; color:#FF9A5C;}
+  .card.wide h4{color:#F1F3F5; font-size:26px;}
+  .card.wide .who{color:#F1F3F5;}
+  .card.wide .who b, .card.wide p{color:#C3CBD4;}
+  .card.wide p{-webkit-line-clamp:2; max-width:75ch;}
+  .card.wide .go{color:#F1F3F5;}
+  @media (max-width:1000px){ .card.wide{min-height:0; aspect-ratio:16/9;} }
 
   /* ---------- currently building ---------- */
   .building{background:var(--band); border-top:2px solid var(--band-line); border-bottom:2px solid var(--band-line); padding:80px 0;}
@@ -536,11 +545,13 @@ const others = P.filter(p => !S.featured.includes(p.slug));
 $("grid").innerHTML = others.map(p => `
   <button class="card" data-open="${esc(p.slug)}" data-kind="${esc(p.kind)}">
     <div class="frame">${img(p.cover, `${p.title} screenshot`, 'loading="lazy"')}${p.badge ? `<span class="badge">${esc(p.badge)}</span>` : ""}</div>
-    <span class="meta-line">${metaLine(p)}</span>
-    <h4>${esc(p.title)}</h4>
-    ${p.role ? `<div class="who"><b>Role</b>${esc(p.role)}</div>` : ""}
-    <p>${esc(p.desc)}</p>
-    <span class="go">Open case study →</span>
+    <span class="body">
+      <span class="meta-line">${metaLine(p)}</span>
+      <h4>${esc(p.title)}</h4>
+      ${p.role ? `<span class="who"><b>Role</b>${esc(p.role)}</span>` : ""}
+      <p>${esc(p.desc)}</p>
+      <span class="go">Open case study →</span>
+    </span>
   </button>`).join("");
 const kinds = ["All", ...new Set(others.map(p => p.kind))];
 $("filters").innerHTML = kinds.map((k, i) => `<button aria-pressed="${i === 0}" data-kind="${esc(k)}">${esc(k)}<span class="n">${k === "All" ? others.length : others.filter(p => p.kind === k).length}</span></button>`).join("");
@@ -558,6 +569,8 @@ function balanceGrid(){
   if(cols === 3 && n > 3 && n % 3 === 1){ cards[0].classList.add("wide"); cards[n - 1].classList.add("wide"); }
   else if(cols === 3 && n > 3 && n % 3 === 2){ cards[n - 1].classList.add("wide"); }
   else if(cols === 2 && n > 2 && n % 2 === 1){ cards[n - 1].classList.add("wide"); }
+  // Wide cards are big, so use the full-size image when there is one (falls back automatically).
+  $("grid").querySelectorAll(".card.wide img").forEach(i => { const big = large(i.dataset.full); if(!i.src.endsWith(big)) i.src = big; });
 }
 balanceGrid();
 addEventListener("resize", balanceGrid);
