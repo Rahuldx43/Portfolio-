@@ -38,7 +38,11 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=JetBrains+Mono:wght@500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=JetBrains+Mono:wght@500&display=swap"></noscript>
+<!-- All text and images come from content.js. Edit that file, not this one. -->
+<script src="content.js"></script>
+<script src="image-sizes.js"></script>
 <style>
   /* Layout idea: a level designer's blockout sheet. Greybox grid, orange path, rooms you can enter. */
   :root{
@@ -337,6 +341,33 @@
   .gallery button:hover{border-color:var(--accent);}
   .gallery img{width:100%; aspect-ratio:16/10; object-fit:cover;}
 
+  /* ---------- level breakdown (annotated map) ---------- */
+  .breakdown{margin-top:44px; scroll-margin-top:80px;}
+  .breakdown > p{color:var(--text-2); max-width:72ch; margin-top:6px;}
+  .bd-grid{display:grid; gap:24px; margin-top:20px;}
+  .bd-map{position:relative; border:2px solid var(--edge); background:#fff; max-width:100%;}
+  .bd-map img{width:100%; height:auto;}
+  .bd-pin{position:absolute; width:34px; height:34px; margin:-17px 0 0 -17px; border-radius:50%; padding:0; background:transparent;
+    border:3px solid var(--accent); box-shadow:0 0 0 2px rgba(255,255,255,.85); transition:transform .15s, background .15s, box-shadow .15s;}
+  .bd-pin.on{background:rgba(245,120,47,.28); transform:scale(1.35); box-shadow:0 0 0 3px #fff, 0 0 18px rgba(245,120,47,.9);}
+  .bd-list{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:18px 24px; align-items:start;}
+  .bd-notes{grid-column:1 / -1;}
+  .bd-zoom{position:absolute; right:10px; bottom:10px; z-index:1; background:rgba(16,19,23,.85); color:#E9ECEF; border:1px solid #3A434F; font-size:13px; font-weight:650; padding:6px 10px;}
+  .bd-zoom:hover{border-color:var(--accent);}
+  .bd-phase h4{display:flex; align-items:center; gap:10px; font-size:16px; font-weight:750;}
+  .bd-mode{font-family:var(--mono); font-size:11.5px; font-weight:500; padding:2px 8px; border:1px solid currentColor; text-transform:uppercase; letter-spacing:.04em;}
+  .bd-mode.green{color:#3FCB7A;} .bd-mode.red{color:#FF6B5B;} .bd-mode.blue{color:#6EA8FF;}
+  :root[data-theme="light"] .bd-mode.green{color:#17834A;} :root[data-theme="light"] .bd-mode.red{color:#C2321F;} :root[data-theme="light"] .bd-mode.blue{color:#2459C9;}
+  .bd-phase ol{list-style:none; display:grid; gap:4px; margin-top:8px;}
+  .bd-beat{display:grid; grid-template-columns:30px minmax(0,1fr); gap:10px; width:100%; text-align:left; background:none; border:1px solid transparent; padding:8px 8px 8px 6px; color:var(--text);}
+  .bd-beat:hover, .bd-beat.on{border-color:var(--edge); background:var(--surface);}
+  .bd-beat .mk{display:grid; place-items:center; width:28px; height:28px; border-radius:50%; border:2px solid var(--accent); color:var(--accent-text); font-weight:800; font-size:13px;}
+  .bd-beat b{display:block; font-size:15px; font-weight:700; line-height:1.3;}
+  .bd-beat span.t{display:block; font-size:14px; color:var(--text-2); margin-top:2px;}
+  .bd-notes{border-top:1px solid var(--line); padding-top:12px; font-size:14px; color:var(--text-2);}
+  .bd-notes b{color:var(--text);}
+  @media (max-width:900px){ .bd-list{grid-template-columns:minmax(0,1fr);} }
+
   /* ---------- showreel player ---------- */
   dialog.player{border:none; padding:0; width:100%; max-width:100%; height:100%; max-height:100%; background:rgba(8,10,12,.96);}
   dialog.player::backdrop{background:transparent;}
@@ -422,6 +453,15 @@
           <p class="role" id="heroRole"></p>
           <h1 class="display" id="heroName"></h1>
           <p class="lede" id="heroIntro"></p>
+          <script>
+            (function () { var S = window.SITE, parts = S.name.split(" "), first = parts.shift(), rest = parts.join(" ");
+              var e = function (id) { return document.getElementById(id); }, h = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]; }); };
+              e("brand").innerHTML = h(first) + " <span>" + h(rest) + "</span>";
+              e("heroRole").textContent = S.role;
+              if (S.availability) e("heroAvail").textContent = S.availability; else e("heroAvail").hidden = true;
+              e("heroName").innerHTML = h(first) + "<br>" + h(rest);
+              e("heroIntro").textContent = S.intro; })();
+          </script>
           <div class="actions">
             <button class="btn btn-dev" id="showreelBtn" type="button" hidden>▶ Watch showreel</button>
             <a class="btn" href="#work">See my work</a>
@@ -553,8 +593,6 @@
   <div class="lb-count" id="lbCount"></div>
 </dialog>
 
-<!-- All text and images come from content.js. Edit that file, not this one. -->
-<script src="content.js"></script>
 <script>
 const S = window.SITE, P = S.projects;
 const $ = id => document.getElementById(id);
@@ -565,7 +603,15 @@ const ytId = url => { const m = String(url || "").match(/(?:youtu\.be\/|v=|embed
 // Big spots use the full-size image (name.webp) if one exists, otherwise what content.js gives.
 const small = src => /-(g?thumb)\.webp$/.test(src) ? src : src.replace(/\.webp$/, "-gthumb.webp");
 const large = src => src.replace(/-g?thumb\.webp$/, ".webp");
-const img = (src, alt, opts = "", size = "small") => `<img src="${esc(size === "large" ? large(src) : small(src))}" data-full="${esc(src)}" alt="${esc(alt)}" ${opts} onerror="if(this.src.indexOf(this.dataset.full)<0){this.src=this.dataset.full}">`;
+// Smaller copies (name-w480.webp, name-w960.webp) listed in image-sizes.js let each screen download only what it needs.
+const IW = window.IMG_W || {};
+const srcset = src => { const w = IW[src]; if(!w) return ""; const b = src.replace(/\.webp$/, "");
+  return [480, 960].filter(t => w > t * 1.15).map(t => `${b}-w${t}.webp ${t}w`).concat(`${src} ${w}w`).join(", "); };
+const pickBase = (src, size) => { const L = large(src); if(size !== "large" && /-thumb\.webp$/.test(src)) return src; return IW[L] ? L : src; };
+const img = (src, alt, opts = "", size = "small", sizes = "100vw") => {
+  const base = pickBase(src, size), ss = srcset(base), fallback = size === "large" ? large(src) : small(src);
+  return `<img src="${esc(ss ? base : fallback)}"${ss ? ` srcset="${esc(ss)}" sizes="${esc(sizes)}"` : ""} data-full="${esc(src)}" alt="${esc(alt)}" ${opts} onerror="this.removeAttribute('srcset');if(this.src.indexOf(this.dataset.full)<0){this.src=this.dataset.full}">`;
+};
 const bullets = s => String(s || "").split(/\n|(?<=\.)\s+(?=[A-Z])/).map(x => x.trim()).filter(Boolean).map(x => x.replace(/\.$/, ""));
 const paras = s => String(s || "").split(/\n\s*\n/).map(x => `<p>${esc(x.trim())}</p>`).join("");
 const noteHTML = n => `<div class="note"><h4>Design iteration</h4><dl>
@@ -576,12 +622,6 @@ const metaLine = p =>[p.kind, p.context, p.year].filter(Boolean).map(esc).join("
 
 /* ---------- basics ---------- */
 document.title = `${S.name} | ${S.role}`;
-const [first, ...rest] = S.name.split(" ");
-$("brand").innerHTML = `${esc(first)} <span>${esc(rest.join(" "))}</span>`;
-$("heroRole").textContent = S.role;
-if(S.availability){ $("heroAvail").textContent = S.availability; } else $("heroAvail").hidden = true;
-$("heroName").innerHTML = `${esc(first)}<br>${esc(rest.join(" "))}`;
-$("heroIntro").textContent = S.intro;
 document.querySelectorAll("[data-cv]").forEach(a => { a.href = S.cvFile; a.setAttribute("download", S.cvFile); });
 $("footName").textContent = `© ${new Date().getFullYear()} ${S.name}, ${S.role.toLowerCase()}.`;
 
@@ -589,8 +629,8 @@ $("footName").textContent = `© ${new Date().getFullYear()} ${S.name}, ${S.role.
 const spots = [{left:"10%", top:"14%"}, {left:"40%", top:"44%"}, {left:"70%", top:"6%"}];
 document.querySelector("#map .pin.exit").insertAdjacentHTML("beforebegin", S.featured.slice(0, 3).map((slug, i) => {
   const p = bySlug(slug);
-  return `<button class="room" style="left:${spots[i].left}; top:${spots[i].top};" data-open="${esc(p.slug)}" aria-label="Open ${esc(p.title)} case study">
-    ${img(p.cover, "")}<span class="tag"><b>${esc(p.title)}</b><i>${esc(p.short)}</i></span></button>`;
+  return `<button class="room" style="left:${spots[i].left}; top:${spots[i].top};" data-open="${esc(p.slug)}">
+    ${img(p.cover, "", "", "small", "(max-width:760px) 90vw, 300px")}<span class="tag"><b>${esc(p.title)}</b><i>${esc(p.short)}</i></span></button>`;
 }).join(""));
 $("mapNote").textContent = S.mapNote;
 
@@ -599,11 +639,12 @@ $("mapNote").textContent = S.mapNote;
   const slides = S.reel || [], stage = $("reelStage");
   if(!slides.length){ $("reel").hidden = true; return; }
   const still = matchMedia("(prefers-reduced-motion:reduce)").matches, DUR = 4500;
-  stage.innerHTML = slides.map((s, i) => `<button class="reel-slide${i ? "" : " on"}" type="button" data-i="${i}" aria-label="${esc(s.label)}: open project">
-    <img ${i ? 'data-src' : 'src'}="${esc(s.src)}" alt="${esc(s.label)}"></button>`).join("");
+  stage.innerHTML = slides.map((s, i) => { let h = img(s.src, s.label, i ? "" : 'fetchpriority="high"', "large", "(max-width:1000px) 100vw, 600px");
+    if(i) h = h.replace(' src="', ' data-src="').replace(' srcset="', ' data-srcset="');
+    return `<button class="reel-slide${i ? "" : " on"}" type="button" data-i="${i}" aria-label="${esc(s.label)}: open project">${h}</button>`; }).join("");
   const els = [...stage.children], bar = $("reelProgress");
   let idx = 0, playing = !still, timer = null, t0 = 0;
-  const load = i => { const im = els[i].querySelector("img"); if(im.dataset.src){ im.src = im.dataset.src; im.removeAttribute("data-src"); } };
+  const load = i => { const im = els[i].querySelector("img"); if(im.dataset.srcset){ im.srcset = im.dataset.srcset; im.removeAttribute("data-srcset"); } if(im.dataset.src){ im.src = im.dataset.src; im.removeAttribute("data-src"); } };
   function show(i){
     idx = (i + slides.length) % slides.length;
     els.forEach((el, k) => el.classList.toggle("on", k === idx));
@@ -639,20 +680,30 @@ $("mapNote").textContent = S.mapNote;
 function stripHTML(p){
   const items = p.process.length ? p.process.map((x, i) => ({ src: x.src, label: x.label, key: p.slug + ":process", i }))
                                  : p.gallery.slice(0, 3).map((src, i) => ({ src, label: "", key: p.slug, i }));
-  return `<div class="strip">${items.map(x => `<figure><button data-lightbox="${esc(x.key)}" data-index="${x.i}" aria-label="Enlarge ${esc(x.label || p.title + " image " + (x.i + 1))}">${img(x.src, x.label ? `${p.title}: ${x.label}` : "", 'loading="lazy"')}</button>${x.label ? `<figcaption>${esc(x.label)}</figcaption>` : ""}</figure>`).join("")}</div>`;
+  return `<div class="strip">${items.map(x => `<figure><button data-lightbox="${esc(x.key)}" data-index="${x.i}" aria-label="Enlarge ${esc(x.label || p.title + " image " + (x.i + 1))}">${img(x.src, x.label ? `${p.title}: ${x.label}` : "", 'loading="lazy"', "small", "(max-width:1000px) 33vw, 220px")}</button>${x.label ? `<figcaption>${esc(x.label)}</figcaption>` : ""}</figure>`).join("")}</div>`;
+}
+function breakdownHTML(b){
+  let n = 0;
+  const pins = [], phases = b.phases.map(ph => `<div class="bd-phase"><h4>${esc(ph.name)} <span class="bd-mode ${esc(ph.colour)}">${esc(ph.mode)}</span></h4><ol>${
+    ph.beats.map(bt => { const i = n++; pins.push(`<button class="bd-pin" type="button" data-beat="${i}" style="left:${+bt.x}%; top:${+bt.y}%;" aria-label="${esc(bt.mark)}: ${esc(bt.title)}"></button>`);
+      return `<li><button class="bd-beat" type="button" data-beat="${i}"><span class="mk">${esc(bt.mark)}</span><span><b>${esc(bt.title)}</b><span class="t">${esc(bt.text)}</span></span></button></li>`; }).join("")}</ol></div>`).join("");
+  return `<section class="breakdown" id="breakdown"><h3>Level breakdown</h3><p>${esc(b.intro)}</p>
+    <div class="bd-grid"><div class="bd-map">${img(b.image, "Hand-drawn level map with player routes, objectives and enemy positions", 'loading="lazy"', "large", "(max-width:1150px) 100vw, 1100px")}${pins.join("")}<button class="bd-zoom" type="button" data-zoom="${esc(b.image)}">View full size</button></div>
+    <div class="bd-list">${phases}${b.notes && b.notes.length ? `<div class="bd-notes"><b>Notes on the map:</b> ${b.notes.map(esc).join(" ")}</div>` : ""}</div></div></section>`;
 }
 function actionLinks(p){
   return [
     p.video ? `<a class="link" href="${esc(p.video)}" target="_blank" rel="noopener">Watch gameplay</a>` : "",
     p.play ? `<a class="link" href="${esc(p.play)}" target="_blank" rel="noopener">${esc(p.playLabel || "Play the game")}</a>` : "",
     p.designDoc ? `<a class="link" href="${esc(p.designDoc)}" target="_blank" rel="noopener">Design document</a>` : "",
+    p.breakdown ? `<a class="link" href="#${esc(p.slug)}" data-open="${esc(p.slug)}" data-jump="breakdown">Level breakdown</a>` : "",
   ].join("");
 }
 $("featured").innerHTML = S.featured.map((slug, i) => {
   const p = bySlug(slug);
   return `<article class="feat${i % 2 ? " flip" : ""}">
     <div class="feat-media">
-      <button class="feat-cover" data-open="${esc(p.slug)}" aria-label="Open ${esc(p.title)} case study">${img(p.cover, `${p.title} screenshot`, 'loading="lazy"', "large")}</button>
+      <button class="feat-cover" data-open="${esc(p.slug)}" aria-label="Open ${esc(p.title)} case study">${img(p.cover, `${p.title} screenshot`, 'loading="lazy"', "large", "(max-width:1000px) 100vw, 660px")}</button>
       ${stripHTML(p)}
     </div>
     <div class="feat-body">
@@ -674,7 +725,7 @@ $("featured").innerHTML = S.featured.map((slug, i) => {
 const others = P.filter(p => !S.featured.includes(p.slug));
 $("grid").innerHTML = others.map(p => `
   <button class="card" data-open="${esc(p.slug)}" data-kind="${esc(p.kind)}">
-    <div class="frame">${img(p.cover, `${p.title} screenshot`, 'loading="lazy"')}${p.badge ? `<span class="badge">${esc(p.badge)}</span>` : ""}</div>
+    <div class="frame">${img(p.cover, `${p.title} screenshot`, 'loading="lazy"', "small", "(max-width:760px) 100vw, (max-width:1000px) 50vw, 380px")}${p.badge ? `<span class="badge">${esc(p.badge)}</span>` : ""}</div>
     <span class="body">
       <span class="meta-line">${metaLine(p)}</span>
       <h4>${esc(p.title)}</h4>
@@ -700,25 +751,25 @@ function balanceGrid(){
   else if(cols === 3 && n > 3 && n % 3 === 2){ cards[n - 1].classList.add("wide"); }
   else if(cols === 2 && n > 2 && n % 2 === 1){ cards[n - 1].classList.add("wide"); }
   // Wide cards are big, so use the full-size image when there is one (falls back automatically).
-  $("grid").querySelectorAll(".card.wide img").forEach(i => { const big = large(i.dataset.full); if(!i.src.endsWith(big)) i.src = big; });
+  $("grid").querySelectorAll(".card img").forEach(i => { if(i.srcset) i.sizes = i.closest(".wide") ? "(max-width:1000px) 100vw, 760px" : "(max-width:760px) 100vw, (max-width:1000px) 50vw, 380px"; });
 }
 balanceGrid();
 addEventListener("resize", balanceGrid);
 
 /* ---------- currently building ---------- */
 const B = S.building;
-$("buildCover").innerHTML = `<img src="${esc(B.cover.src)}" alt="${esc(B.cover.alt)}">`;
+$("buildCover").innerHTML = img(B.cover.src, B.cover.alt, 'loading="lazy"', "large", "(max-width:1000px) 100vw, 600px");
 $("buildStatus").textContent = B.status;
 $("buildTitle").textContent = B.title;
 $("buildPitch").textContent = B.pitch;
 $("buildDetails").innerHTML = B.details.map(d => `<dt>${esc(d.label)}</dt><dd>${esc(d.value)}</dd>`).join("");
-$("buildShots").innerHTML = B.shots.map((s, i) => `<button data-lightbox="building" data-index="${i + 1}" aria-label="Enlarge: ${esc(s.alt)}"><img loading="lazy" src="${esc(s.thumb || s.src)}" alt="${esc(s.alt)}"></button>`).join("");
+$("buildShots").innerHTML = B.shots.map((s, i) => `<button data-lightbox="building" data-index="${i + 1}" aria-label="Enlarge: ${esc(s.alt)}">${img(s.src, s.alt, 'loading="lazy"', "small", "(max-width:760px) 50vw, 370px")}</button>`).join("");
 document.querySelector('.nav a[href="#building"]').textContent = B.title;
 
 /* ---------- experience, skills, about, contact ---------- */
 $("timeline").innerHTML = S.experience.map(x => `<li><time>${esc(x.date)}</time><div><h3>${esc(x.role)}, <span class="org">${esc(x.org)}</span></h3><p>${esc(x.desc)}</p>${x.modules && x.modules.length ? `<ul class="modules" aria-label="Modules">${x.modules.map(m => `<li>${esc(m)}</li>`).join("")}</ul>` : ""}</div></li>`).join("");
 $("skills").innerHTML = S.skills.map(g => `<div><h3>${esc(g.group)}</h3><ul>${g.items.map(s => `<li>${esc(s)}</li>`).join("")}</ul></div>`).join("");
-$("portrait").src = S.portrait; $("portrait").alt = `Portrait of ${S.name}`;
+{ const pt = $("portrait"), ss = srcset(S.portrait); if(ss){ pt.srcset = ss; pt.sizes = "(max-width:1000px) 340px, 360px"; } pt.src = S.portrait; pt.alt = `Portrait of ${S.name}`; }
 $("bio").insertAdjacentHTML("beforeend", S.about.map(t => `<p>${esc(t)}</p>`).join("") +
   `<div class="numbers">${S.stats.map(s => `<div><b>${esc(s.num)}</b>${esc(s.label)}</div>`).join("")}</div>`);
 const C = S.contact;
@@ -777,8 +828,9 @@ function openCase(slug, push = true){
       <div><dt>Context</dt><dd>${esc(p.context)}</dd></div>
     </dl>
     ${links ? `<div class="links">${links}</div>` : ""}
-    ${id ? `<div class="video"><button data-yt="${id}" aria-label="Play ${esc(p.title)} video">${img(p.poster || p.cover, "", "", "large")}<span>Play video</span></button></div>` : ""}
+    ${id ? `<div class="video"><button data-yt="${id}" aria-label="Play ${esc(p.title)} video">${img(p.poster || p.cover, "", "", "large", "(max-width:1100px) 100vw, 1100px")}<span>Play video</span></button></div>` : ""}
     ${p.process.length ? stripHTML(p) : ""}
+    ${p.breakdown ? breakdownHTML(p.breakdown) : ""}
     <div class="text">
       ${p.overview ? `<section class="full"><h3>Overview</h3>${paras(p.overview)}</section>` : ""}
       ${p.designNote ? `<section class="full">${noteHTML(p.designNote)}</section>` : ""}
@@ -787,7 +839,7 @@ function openCase(slug, push = true){
       ${p.lessons ? `<section><h3>What I learned</h3>${paras(p.lessons)}</section>` : ""}
     </div>
     ${p.tags.length ? `<div class="chips">${p.tags.map(t => `<span>${esc(t)}</span>`).join("")}</div>` : ""}
-    <div class="gallery">${p.gallery.map((g, i) => `<button data-lightbox="${esc(p.slug)}" data-index="${i}" aria-label="Enlarge image ${i + 1}">${img(g, `${p.title} image ${i + 1}`, 'loading="lazy"')}</button>`).join("")}</div>`;
+    <div class="gallery">${p.gallery.map((g, i) => `<button data-lightbox="${esc(p.slug)}" data-index="${i}" aria-label="Enlarge image ${i + 1}">${img(g, `${p.title} image ${i + 1}`, 'loading="lazy"', "small", "(max-width:760px) 100vw, 260px")}</button>`).join("")}</div>`;
   if(!caseDialog.open) caseDialog.showModal();
   $("caseClose").focus({preventScroll:true});
   caseDialog.scrollTop = 0;
@@ -801,6 +853,8 @@ caseDialog.addEventListener("close", () => {
   lastFocus?.focus();
 });
 $("caseClose").addEventListener("click", closeCase);
+const lightBeat = i => caseDialog.querySelectorAll("[data-beat]").forEach(el => el.classList.toggle("on", el.dataset.beat === i));
+["mouseover", "focusin", "click"].forEach(ev => caseDialog.addEventListener(ev, e => { const el = e.target.closest("[data-beat]"); if(el) lightBeat(el.dataset.beat); }));
 caseDialog.addEventListener("click", e => {
   const yt = e.target.closest("[data-yt]");
   if(!yt) return;
@@ -811,8 +865,9 @@ caseDialog.addEventListener("click", e => {
   yt.parentElement.innerHTML = `<iframe src="https://www.youtube.com/embed/${yt.dataset.yt}?autoplay=1&rel=0&playsinline=1&origin=${origin}" title="Project video" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
 });
 document.addEventListener("click", e => {
-  const o = e.target.closest("[data-open]"); if(o){ openCase(o.dataset.open); return; }
+  const o = e.target.closest("[data-open]"); if(o){ e.preventDefault(); openCase(o.dataset.open); if(o.dataset.jump){ const j = document.getElementById(o.dataset.jump); if(j) j.scrollIntoView(); } return; }
   const l = e.target.closest("[data-lightbox]"); if(l) openLightbox(l.dataset.lightbox, +l.dataset.index);
+  const z = e.target.closest("[data-zoom]"); if(z){ lbList = [z.dataset.zoom]; lbIdx = 0; showLb(); lb.showModal(); }
 });
 window.addEventListener("popstate", () => { const s = location.hash.slice(1); if(bySlug(s)) openCase(s, false); else closeCase(); });
 if(bySlug(location.hash.slice(1))) openCase(location.hash.slice(1), false);

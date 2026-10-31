@@ -141,6 +141,7 @@ window.SITE = {
      desc       2 to 3 sentences shown on the card
      overview, whatIDid, challenges, lessons   case study text.
      designNote optional problem / change / result from playtesting, shown on featured projects
+     breakdown  optional level breakdown: a map image with numbered beats (x and y are % positions on the map)
                 In whatIDid, each sentence becomes one bullet point.
      cover      main image
      process    optional "greybox to final" images, each with a label
@@ -173,6 +174,93 @@ window.SITE = {
       "problem": "Combat encounters needed better mission flow while new gameplay features were still being added.",
       "change": "Tested each encounter and adjusted enemy placement, patrol routes and AI behaviour.",
       "result": "Smoother flow through each mission, and a more stable, organised project by the final build."
+    },
+    "breakdown": {
+      "image": "images/fa3f06e6bc4c4280.webp",
+      "intro": "Planned on paper before the greybox. The mission moves from stealth to combat to escape, and the player's route is colour-coded by how they move through each phase.",
+      "phases": [
+        {
+          "name": "Recon and infiltration",
+          "mode": "Stealth",
+          "colour": "green",
+          "beats": [
+            {
+              "mark": "1",
+              "x": 5.3,
+              "y": 51.4,
+              "title": "Reach the observation ridge",
+              "text": "Scout the base with binoculars before committing, using the abandoned hut as cover on the way in."
+            },
+            {
+              "mark": "2",
+              "x": 40.4,
+              "y": 70.9,
+              "title": "Follow the truck, then sneak in behind it",
+              "text": "The supply truck is the way past the checkpoint: the player tails it and slips into the base behind it."
+            }
+          ]
+        },
+        {
+          "name": "Sabotage and assault",
+          "mode": "Combat",
+          "colour": "red",
+          "beats": [
+            {
+              "mark": "3",
+              "x": 37.3,
+              "y": 11.9,
+              "title": "Destroy the communications centre",
+              "text": "The first loud objective, next to the garage, where the mission switches from stealth to combat."
+            },
+            {
+              "mark": "★",
+              "x": 48.4,
+              "y": 29.5,
+              "title": "Obtain the access card",
+              "text": "A key objective inside the first camp that sets up the push deeper into the base."
+            },
+            {
+              "mark": "4",
+              "x": 56.3,
+              "y": 19.4,
+              "title": "Infiltrate the next camp",
+              "text": "Through the gate and across the central courtyard into the inner camp."
+            }
+          ]
+        },
+        {
+          "name": "Extraction and escape",
+          "mode": "Combat",
+          "colour": "blue",
+          "beats": [
+            {
+              "mark": "★",
+              "x": 76.8,
+              "y": 32.6,
+              "title": "Gather intel",
+              "text": "Collected from the officer quarters."
+            },
+            {
+              "mark": "5",
+              "x": 85.5,
+              "y": 44.6,
+              "title": "Plant the explosive",
+              "text": "At the power station, deep in the inner camp."
+            },
+            {
+              "mark": "6",
+              "x": 87.3,
+              "y": 54.3,
+              "title": "Board the helicopter and escape",
+              "text": "The extraction path leads to the helipad to finish the mission."
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Multiple patrol routes inside the base.",
+        "Searchlights and sniper towers raise the stealth difficulty."
+      ]
     },
       "cover": "images/aee7f4ea353fdfc4.webp",
       "process": [

@@ -11,7 +11,10 @@ website/
   showreel.mp4               the showreel played by the "Watch showreel" button
   og-image.jpg               the picture shown when your link is shared on LinkedIn or WhatsApp
   favicon.svg, apple-touch-icon.png   the small RP icon in browser tabs and on phones
+  image-sizes.js             list of image widths so phones get smaller copies (made automatically)
 ```
+
+In `images/`, files ending in `-w480.webp` and `-w960.webp` are smaller copies of your screenshots that phones download instead of the full size. You can ignore them. A new image you add works without them; it just always loads at full size.
 
 ## Change any text
 
@@ -52,6 +55,15 @@ These three appear as the rooms on the level map at the top and as the big proje
 ## Design notes on featured projects
 
 Each featured project can have a `designNote` with a `problem`, the `change` you made and the `result`. Keep each one to one sentence and only write what really happened. If a project has no `designNote`, its first three "What I did" points are shown instead.
+
+## Level breakdown (The Broken Camp)
+
+The Broken Camp case study has an interactive level breakdown built on your paper map. It lives in `content.js` under `breakdown` inside that project:
+
+- `phases` are the three mission phases. Each `beat` has a `mark` (the number or ★ on the map), a `title`, a short `text`, and `x` / `y`, which place the highlight ring as a percentage across and down the map.
+- `notes` are the notes from the map.
+
+To add a breakdown to another project, copy the whole `breakdown` block into that project and change the image, beats and positions.
 
 ## Replace the showreel
 
