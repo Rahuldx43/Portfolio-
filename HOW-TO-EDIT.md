@@ -67,13 +67,12 @@ To add a breakdown to another project, copy the whole `breakdown` block into tha
 
 ## Replace the showreel
 
-The current showreel (53 seconds) is made from your screenshots. When you cut a showreel from real gameplay footage:
+The showreel (72 seconds) is cut from your gameplay videos: The Broken Camp (paper map, greybox and final build), Knight Fight, the combat system, Gauntlet Mania, The Boys: Ascent, Echoes Beyond The Hills, Boss Arena and Hospital Escape.
 
-1. Export it as an `.mp4` (H.264), ideally 1280×720 and under about 15 MB so it loads quickly.
-2. Put it in the `website` folder and name it `showreel.mp4`, replacing the old one. Or give it a new name and change `file:` in `showreel:` in `content.js`.
-3. Optionally replace `images/showreel-poster.jpg` with a frame from the new video.
+- `website/showreel.mp4` is the web version (1280×720, plays on the site).
+- `showreel/Rahul_Pranasseri_Showreel.mp4` is the full HD copy for LinkedIn and job applications.
 
-A full HD copy of the current showreel is in the `showreel` folder of this repository, ready to upload to LinkedIn or attach to applications.
+To use a different video later, export an `.mp4` (H.264, 1280×720, under about 30 MB), put it in the `website` folder as `showreel.mp4`, and optionally replace `images/showreel-poster.jpg` with a frame from it.
 
 ## Replace your CV
 
