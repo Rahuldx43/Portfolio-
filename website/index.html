@@ -8,6 +8,29 @@
 <meta name="theme-color" content="#101317">
 <!-- YouTube embeds need to know which site they are on (otherwise "Error 153"). -->
 <meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://rahulpranasseri.netlify.app/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<!-- Link previews on LinkedIn, WhatsApp, Slack, X and Discord -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Rahul Pranasseri">
+<meta property="og:title" content="Rahul Pranasseri | Game Designer">
+<meta property="og:description" content="Levels, combat encounters and gameplay systems, built in Unreal Engine 5 from the first greybox to the final lighting pass.">
+<meta property="og:url" content="https://rahulpranasseri.netlify.app/">
+<meta property="og:image" content="https://rahulpranasseri.netlify.app/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Rahul Pranasseri, Game Designer, over a screenshot of The Broken Camp">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Tells search engines who this site is about -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Rahul Pranasseri","jobTitle":"Game Designer",
+ "url":"https://rahulpranasseri.netlify.app/","email":"mailto:rahulravimenon@gmail.com",
+ "address":{"@type":"PostalAddress","addressLocality":"Stoke-on-Trent","addressCountry":"GB"},
+ "alumniOf":[{"@type":"CollegeOrUniversity","name":"Staffordshire University"},{"@type":"CollegeOrUniversity","name":"SRM Institute of Science and Technology"}],
+ "knowsAbout":["Game design","Level design","Gameplay systems","Combat design","Unreal Engine 5","Blueprints"],
+ "sameAs":["https://www.linkedin.com/in/rahuldx/","https://rahulachu.itch.io/"]}
+</script>
 <script>
   /* Theme: dark by default. A visitor's choice is remembered. Runs before paint so the page never flashes. */
   (function () { var t = 'dark'; try { t = localStorage.getItem('rp-theme') || 'dark'; } catch (e) {}
@@ -88,7 +111,9 @@
 
   /* ---------- hero ---------- */
   .hero{padding:60px 0 56px;}
-  .hero .role{font-variation-settings:var(--wide); font-weight:750; font-size:clamp(20px, 2.2vw, 28px); color:var(--accent-text); margin-bottom:14px;}
+  .hero .role{font-variation-settings:var(--wide); font-weight:750; font-size:clamp(20px, 2.2vw, 28px); color:var(--accent-text); margin-bottom:14px; text-wrap:balance;}
+  .avail{display:inline-flex; align-items:center; gap:9px; font-size:14px; font-weight:600; color:var(--text); border:1px solid var(--edge); background:var(--surface); padding:5px 12px 5px 10px; margin-bottom:22px;}
+  .avail::before{content:""; width:8px; height:8px; border-radius:50%; background:#3FCB7A; box-shadow:0 0 0 3px rgba(63,203,122,.22);}
   .hero-top{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.05fr); gap:32px 48px; align-items:center;}
   .hero h1{font-size:clamp(50px, 6.6vw, 96px);}
   .hero .lede{margin-top:20px;}
@@ -312,6 +337,11 @@
   .gallery button:hover{border-color:var(--accent);}
   .gallery img{width:100%; aspect-ratio:16/10; object-fit:cover;}
 
+  /* ---------- showreel player ---------- */
+  dialog.player{border:none; padding:0; width:100%; max-width:100%; height:100%; max-height:100%; background:rgba(8,10,12,.96);}
+  dialog.player::backdrop{background:transparent;}
+  dialog.player video{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:min(92vw, calc((100vh - 120px) * 16 / 9)); max-width:100%; aspect-ratio:16/9; background:#000;}
+
   /* ---------- lightbox (always dark, it is a viewer) ---------- */
   dialog.lightbox{border:none; background:rgba(8,10,12,.95); width:100%; max-width:100%; height:100%; max-height:100%; padding:0;}
   dialog.lightbox::backdrop{background:transparent;}
@@ -388,11 +418,13 @@
     <div class="wrap">
       <div class="hero-top">
         <div>
+          <p class="avail" id="heroAvail"></p>
           <p class="role" id="heroRole"></p>
           <h1 class="display" id="heroName"></h1>
           <p class="lede" id="heroIntro"></p>
           <div class="actions">
-            <a class="btn btn-dev" href="#work">See my work</a>
+            <button class="btn btn-dev" id="showreelBtn" type="button" hidden>▶ Watch showreel</button>
+            <a class="btn" href="#work">See my work</a>
             <a class="btn" data-cv href="#">Download CV</a>
           </div>
         </div>
@@ -508,6 +540,11 @@
   <div class="case-body" id="caseBody"></div>
 </dialog>
 
+<dialog class="player" id="showreelDialog" aria-label="Showreel">
+  <video id="showreelVideo" controls playsinline preload="none"></video>
+  <button class="lb-btn lb-close" id="showreelClose">Close</button>
+</dialog>
+
 <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
   <div class="lb-inner"><img id="lbImg" alt=""></div>
   <button class="lb-btn lb-close" id="lbClose">Close</button>
@@ -541,7 +578,8 @@ const metaLine = p =>[p.kind, p.context, p.year].filter(Boolean).map(esc).join("
 document.title = `${S.name} | ${S.role}`;
 const [first, ...rest] = S.name.split(" ");
 $("brand").innerHTML = `${esc(first)} <span>${esc(rest.join(" "))}</span>`;
-$("heroRole").textContent = `${S.role}, ${S.engine}`;
+$("heroRole").textContent = S.role;
+if(S.availability){ $("heroAvail").textContent = S.availability; } else $("heroAvail").hidden = true;
 $("heroName").innerHTML = `${esc(first)}<br>${esc(rest.join(" "))}`;
 $("heroIntro").textContent = S.intro;
 document.querySelectorAll("[data-cv]").forEach(a => { a.href = S.cvFile; a.setAttribute("download", S.cvFile); });
@@ -691,7 +729,7 @@ $("contactDetails").innerHTML = `
   <div><dt>Phone</dt><dd>${C.phones.map(p => `<a href="tel:${esc(p.number.replace(/\s/g, ""))}">${esc(p.number)}</a> (${esc(p.note)})`).join("<br>")}</dd></div>
   <div><dt>Location</dt><dd>${esc(C.location)}</dd></div>
   <div><dt>Looking for</dt><dd>${esc(C.lookingFor)}</dd></div>
-  <div><dt>Elsewhere</dt><dd><a href="${esc(C.linkedin)}" target="_blank" rel="noopener">LinkedIn</a></dd></div>`;
+  <div><dt>Elsewhere</dt><dd>${[[C.linkedin, "LinkedIn"], [C.itch, "Playable games on itch.io"]].filter(l => l[0]).map(l => `<a href="${esc(l[0])}" target="_blank" rel="noopener">${l[1]}</a>`).join("<br>")}</dd></div>`;
 
 /* ---------- theme toggle ---------- */
 const themeBtn = $("themeBtn");
@@ -778,6 +816,17 @@ document.addEventListener("click", e => {
 });
 window.addEventListener("popstate", () => { const s = location.hash.slice(1); if(bySlug(s)) openCase(s, false); else closeCase(); });
 if(bySlug(location.hash.slice(1))) openCase(location.hash.slice(1), false);
+
+/* ---------- showreel video ---------- */
+if(S.showreel && S.showreel.file){
+  const btn = $("showreelBtn"), dlg = $("showreelDialog"), vid = $("showreelVideo");
+  btn.hidden = false; btn.textContent = `▶ ${S.showreel.label || "Watch showreel"}`;
+  if(S.showreel.poster) vid.poster = S.showreel.poster;
+  btn.addEventListener("click", () => { if(!vid.src) vid.src = S.showreel.file; dlg.showModal(); vid.play().catch(() => {}); });
+  $("showreelClose").addEventListener("click", () => dlg.close());
+  dlg.addEventListener("click", e => { if(e.target === dlg) dlg.close(); });
+  dlg.addEventListener("close", () => vid.pause());
+}
 
 /* ---------- lightbox ---------- */
 const lb = $("lightbox"), lbImg = $("lbImg");

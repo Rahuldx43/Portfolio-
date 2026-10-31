@@ -18,6 +18,8 @@ window.SITE = {
   name: "Rahul Pranasseri",
   role: "Game Designer",
   engine: "Unreal Engine 5",
+  // Small "open to work" line above the title. Set to "" to hide it.
+  availability: "Open to game design and level design roles, UK and remote",
   intro: "I design levels, combat encounters and gameplay systems, then build them myself in Unreal Engine 5, from the first greybox to the final lighting pass.",
 
   // Your CV. Put the PDF in the website folder and write its file name here.
@@ -45,6 +47,9 @@ window.SITE = {
   ],
   // The video linked under the reel.
   reelVideo: { label: "Watch The Broken Camp gameplay", url: "https://youtu.be/48gaFhpSrlk" },
+  // The showreel video opened by the "Watch showreel" button. To use a new video, put the .mp4
+  // in the website folder and change "file". Delete these lines to hide the button.
+  showreel: { file: "showreel.mp4", poster: "images/showreel-poster.jpg", label: "Watch showreel" },
 
   /* ---------- Currently building ---------- */
   building: {
@@ -116,6 +121,7 @@ window.SITE = {
     location: "Stoke-on-Trent, UK. Open to remote.",
     lookingFor: "Full-time game design and level design roles, plus freelance work",
     linkedin: "https://www.linkedin.com/in/rahuldx/",
+    itch: "https://rahulachu.itch.io/",
     // Web3Forms access key. Contact form messages are emailed to the address
     // you signed up to Web3Forms with. This key is meant to be public.
     formKey: "f29b686e-8246-4a9c-976f-f3034d3060b0",
