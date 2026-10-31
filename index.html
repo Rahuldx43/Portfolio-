@@ -3567,5 +3567,24 @@ function preloadProjectGalleryImages(){
 
 
 
-<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2ff7b2686e8a43dcabd2344acb4d4c7d"}'></script><!-- End Cloudflare Web Analytics -->
+<!-- Cloudflare Web Analytics.
+     Owner opt-out: open the site once with ?notrack on a browser to stop counting your own visits there;
+     open it with ?track to start counting that browser again. The setting is remembered per browser. -->
+<script>
+(function () {
+  var KEY = 'rp_notrack', q = location.search, msg = '';
+  try {
+    if (/[?&]notrack(=|&|$)/.test(q)) { localStorage.setItem(KEY, '1'); msg = 'Analytics OFF for this browser - your visits here will not be counted.'; }
+    else if (/[?&]track(=|&|$)/.test(q)) { localStorage.removeItem(KEY); msg = 'Analytics ON again for this browser.'; }
+    if (msg) { history.replaceState(null, '', location.pathname + location.hash); alert(msg); }
+    if (localStorage.getItem(KEY) === '1') return;
+  } catch (e) {}
+  var s = document.createElement('script');
+  s.defer = true;
+  s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+  s.setAttribute('data-cf-beacon', '{"token": "2ff7b2686e8a43dcabd2344acb4d4c7d"}');
+  (document.body || document.head).appendChild(s);
+})();
+</script>
+<!-- End Cloudflare Web Analytics -->
 </body></html>
