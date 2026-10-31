@@ -705,7 +705,7 @@ function breakdownHTML(b){
 }
 function actionLinks(p){
   return [
-    p.video ? `<a class="link" href="${esc(p.video)}" target="_blank" rel="noopener">Watch gameplay</a>` : "",
+    p.video ? `<a class="link" href="${esc(p.video)}" target="_blank" rel="noopener">${esc(p.videoLabel || "Watch gameplay")}</a>` : "",
     p.play ? `<a class="link" href="${esc(p.play)}" target="_blank" rel="noopener">${esc(p.playLabel || "Play the game")}</a>` : "",
     p.designDoc ? `<a class="link" href="${esc(p.designDoc)}" target="_blank" rel="noopener">Design document</a>` : "",
     ...(p.moreLinks || []).map(l => `<a class="link" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`),
@@ -827,7 +827,7 @@ function openCase(slug, push = true){
   const id = ytId(p.video);
   const links = [
     p.play ? `<a class="btn btn-dev" href="${esc(p.play)}" target="_blank" rel="noopener">${esc(p.playLabel || "Play the game")}</a>` : "",
-    p.video ? `<a class="btn" href="${esc(p.video)}" target="_blank" rel="noopener">Watch on YouTube</a>` : "",
+    p.video ? `<a class="btn" href="${esc(p.video)}" target="_blank" rel="noopener">${esc(p.videoLabel || "Watch on YouTube")}</a>` : "",
     p.designDoc ? `<a class="btn" href="${esc(p.designDoc)}" target="_blank" rel="noopener">Read the design document</a>` : "",
     ...(p.moreLinks || []).map(l => `<a class="btn" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`),
   ].join("");

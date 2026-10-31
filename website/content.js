@@ -149,6 +149,7 @@ window.SITE = {
      gallery    all images shown in the case study
      tags       short skill tags
      video      YouTube link or ""
+     videoLabel optional button text for the video link (default "Watch gameplay")
      poster     optional picture shown behind the "Play video" button (defaults to the cover)
      play       link to play the game or ""
      playLabel  button text for the play link
@@ -298,7 +299,8 @@ window.SITE = {
         "Playtesting"
       ],
       "video": "https://youtu.be/wEFuCUPaQoA",
-    "moreLinks": [{ "label": "Watch the greybox", "url": "https://youtu.be/48gaFhpSrlk" }],
+    "videoLabel": "Watch final set-dressed level",
+    "moreLinks": [{ "label": "Watch blockout level", "url": "https://youtu.be/48gaFhpSrlk" }],
       "play": "",
       "playLabel": "",
       "designDoc": "https://drive.google.com/file/d/1M7mZlCA4g2_XOpMwkfhBuRxLg9aw2W10/view?usp=sharing"
