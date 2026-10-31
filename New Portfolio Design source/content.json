@@ -1,0 +1,1155 @@
+{
+ "featured": [
+  {
+   "id": 1785348440771,
+   "title": "The Broken Camp",
+   "cat": "Level Design",
+   "type": "Level",
+   "desc": "\"Third-person military shooter built solo in Unreal Engine 5.7. Level design centered on player guidance through environmental storytelling, layered combat encounters, and a fully greyboxed-to-final pipeline, built around gameplay systems designed first.\"",
+   "role": "Game Designer, Gameplay Programmer & Level Designer",
+   "timeline": "University Final Year Project (2026)",
+   "genre": "Single-Player Military Third-Person Shooter",
+   "overview": "This is my Final Year Project and the largest Unreal Engine project I have worked on so far. The goal was to develop a third-person shooter that brings together gameplay programming, level design, AI, mission systems, and environment production into a complete playable experience. The project is now complete, shaped by structured playtesting and multiple rounds of iteration on gameplay, AI behaviour, and level design. Final set dressing, lighting, and optimisation are complete, taking the project from greybox through to a fully realised playable environment",
+   "resp": "Designed the level from concept art to final playable environment. Created the initial blockout and refined gameplay flow. Built gameplay systems using Blueprints. Developed enemy AI and combat encounters. Refined enemy placement, combat pacing, and player progression. Built the environment using Fab Marketplace assets. Created in-game cinematics using Unreal Sequencer. Currently testing, debugging, and optimising the project for the final build.",
+   "challenges": "One of the biggest challenges was refining the enemy AI while new gameplay features were still being added. I spent a lot of time testing combat encounters, adjusting enemy placement, patrol routes, and behaviour to improve the overall flow of each mission. As the project grew, debugging Blueprint systems and fixing issues between interconnected mechanics became a regular part of development, helping me build a more stable and organised project.",
+   "lessons": "This project gave me a much better understanding of how gameplay systems, AI, level design, and player progression work together. It also improved my Blueprint workflow, problem-solving, and level iteration process. During development, I also learned the fundamentals of Unreal Engine Sequencer, which helped me present gameplay moments and support the overall pacing of the project.",
+   "thumb": "images/aee7f4ea353fdfc4.webp",
+   "gallery": [
+    "images/aee7f4ea353fdfc4.webp",
+    "images/ece6e8e1d27394e4.webp",
+    "images/b4500d9d8890abf1.webp",
+    "images/4368d2b38889896c.webp",
+    "images/c447d87141b5f5d3.webp",
+    "images/4dfbfdf9ce480a99.webp",
+    "images/fa3f06e6bc4c4280.webp",
+    "images/7f3613919b99f01b.webp",
+    "images/d7bf1b0ed6f8fa46.webp"
+   ],
+   "tags": [
+    "UE5",
+    "BLUEPRINT",
+    "LEVEL DESIGN",
+    "GAMEPLAY & AI DESIGN",
+    "PLAYTESTING"
+   ],
+   "video": {
+    "label": "Gameplay Video",
+    "url": "https://youtu.be/48gaFhpSrlk"
+   },
+   "gameLink": null,
+   "links": [
+    {
+     "label": "Documentation link",
+     "url": "https://drive.google.com/file/d/1M7mZlCA4g2_XOpMwkfhBuRxLg9aw2W10/view?usp=sharing"
+    }
+   ],
+   "knownInBase": true
+  },
+  {
+   "id": 1785444625622,
+   "title": "Knight Fight",
+   "cat": "Level Design",
+   "type": "Level",
+   "desc": "Knight Fight is a collaborative university project built in Unreal Engine 5. Players battle as ghostly knights inside a Victorian mansion, using traps, health pickups, and ragdoll physics to knock each other out. I worked mainly on the level design, gameplay systems, lighting, and environment setup.",
+   "role": "Level Designer & Gameplay Programmer (Collaborative University Project)",
+   "timeline": "March 2026 – August 2026",
+   "genre": "Local Multiplayer Physics-Based Party Brawler",
+   "overview": "Knight Fight is a local multiplayer party game developed as a collaborative university project in Unreal Engine 5. Players take control of ghosts trapped inside knight armour and battle inside a Victorian mansion using environmental traps, ragdoll physics, and health pickups. Inspired by games like Gang Beasts and BombSquad, the focus was on creating short, chaotic matches where the environment is just as dangerous as the other players.",
+   "resp": "Designed the Victorian mansion level from the initial blockout to the final gameplay layout. Implemented gameplay systems using Unreal Engine Blueprints. Developed the ragdoll system and integrated it with gameplay interactions. Built environmental hazards including flame traps, spike traps, oil hazards, and health pickups. Designed and implemented the dynamic local multiplayer camera. Completed level set dressing using assets created by the 3D artist. Created the final lighting and post-processing to establish the Victorian atmosphere. Balanced player flow, trap placement, and gameplay spaces through iteration and testing.",
+   "challenges": "One of the biggest challenges was creating a level that stayed fun while supporting four-player local multiplayer. The camera, trap placement, and health pickup locations went through several iterations to keep the gameplay readable without reducing the chaotic feel. Another challenge was working with limited concept art during development. Since there were very few visual sketches available, we relied on Victorian mansion references, gameplay references, and existing asset packs to guide the level design and environment.",
+   "lessons": "This was my first collaborative university project, and it gave me a much better understanding of how different disciplines come together during game development. Working closely with artists and programmers taught me the importance of communication, planning, and iteration. It also helped me improve my skills in level design, Blueprint gameplay systems, lighting, set dressing, and designing spaces around multiplayer gameplay.",
+   "thumb": "images/99c7067a33d68eed-thumb.webp",
+   "gallery": [
+    "images/28ddf368a6e55d2b.webp",
+    "images/10e84e5a4d5a2bc5.webp",
+    "images/30746014d9d70933.webp",
+    "images/30746014d9d70933.webp",
+    "images/8a94fc0fe64a3c4e.webp",
+    "images/c8efc3449039366f.webp",
+    "images/a30839217391941e.webp",
+    "images/a1f3dafc9033ebf1.webp"
+   ],
+   "tags": [
+    "UE5",
+    "BLUEPRINT",
+    "LEVEL DESIGN",
+    "COLLABORATIVE PROJECT",
+    "MULTIPLAYER"
+   ],
+   "video": {
+    "label": "Gameplay Video",
+    "url": "https://www.youtube.com/watch?v=7PmD-EkIP1g"
+   },
+   "gameLink": {
+    "label": "Play the Game",
+    "url": "https://drive.google.com/drive/u/1/folders/1vIRiAz5o-boYNEr3eGu2QlOa53WmORs-"
+   },
+   "links": [
+    {
+     "label": "Level Design Documentation link",
+     "url": "https://drive.google.com/file/d/1fCGvJC7kKqUeCw4_FnhUzFBttA4efcAV/view"
+    }
+   ],
+   "knownInBase": true
+  },
+  {
+   "id": 1785444656541,
+   "title": "NIGHTCLUB FIGHT ARENA",
+   "cat": "Freelance",
+   "type": "Level",
+   "desc": "A freelance Unreal Engine 5 project created for a studio client. The project involved designing and building a nightclub combat arena from blockout to the final environment using Fab assets. My responsibilities included level layout, environment art, set dressing, lighting, optimisation, and polishing the scene to create a visually engaging and gameplay-ready space.",
+   "role": "Level Designer / Environment Artist",
+   "timeline": "2025",
+   "genre": "Action • Combat Arena",
+   "overview": "A freelance environment build for a studio client — a nightclub designed to double as a close-quarters combat arena. I took it from blockout through to final set dressing using Fab Marketplace assets, handling level layout, lighting, and optimisation while working closely with the client throughout.",
+   "resp": "Created the initial blockout for the nightclub layout. Built the environment using Fab Marketplace assets. Completed the final set dressing with furniture, stage props, lighting fixtures, and environmental details. Developed the lighting to create a nightclub atmosphere while keeping the level readable for gameplay. Optimised the environment to maintain good performance. Refined the level through regular feedback from the client.",
+   "challenges": "Making it read as a real nightclub while still functioning as a combat space was the main tension — too much dressing and player movement suffers, too little and it feels empty. Lighting took the most iteration: testing colours, intensities, and placement until it matched the atmosphere the client wanted without losing readability in the areas that mattered for gameplay.",
+   "lessons": "Sharpened my blockout-to-final workflow and, more importantly, my ability to balance level design against lighting and performance rather than treating them separately. Working directly with the client throughout also made me quicker at adapting to feedback mid-build instead of waiting until a review milestone.",
+   "thumb": "images/49a2899d354bf535-thumb.webp",
+   "gallery": [
+    "images/905cb2f20ad69f56.webp",
+    "images/95b8e53190e042d4.webp",
+    "images/52f838055c8f8e1e.webp",
+    "images/903fbbc5d7a7341c.webp",
+    "images/01abc5f4a4668584.webp",
+    "images/991a364367cff24e.webp",
+    "images/b2715274055f4c64.webp",
+    "images/436eeaac7260277d.webp",
+    "images/38a95abe94a56639.webp",
+    "images/d5d93b01f685b667.webp",
+    "images/83a3bf57c5747592.webp",
+    "images/1e04d2675358b39e.webp"
+   ],
+   "tags": [
+    "UE5",
+    "Modular Assets",
+    "LEVEL DESIGN",
+    "OPTIMIZATION"
+   ],
+   "video": null,
+   "gameLink": null,
+   "links": [],
+   "knownInBase": true
+  }
+ ],
+ "main": [
+  {
+   "id": 1785621135752,
+   "title": "The Broken Camp",
+   "cat": "Level Design",
+   "type": "Level",
+   "desc": "\"Third-person military shooter built solo in Unreal Engine 5.7. Level design centered on player guidance through environmental storytelling, layered combat encounters, and a fully greyboxed-to-final pipeline, built around gameplay systems designed first.\"",
+   "role": "Game Designer, Gameplay Programmer & Level Designer",
+   "timeline": "University Final Year Project (2026)",
+   "genre": "Single-Player Military Third-Person Shooter",
+   "overview": "This is my Final Year Project and the largest Unreal Engine project I have worked on so far. The goal was to develop a third-person shooter that brings together gameplay programming, level design, AI, mission systems, and environment production into a complete playable experience. The project is now complete, shaped by structured playtesting and multiple rounds of iteration on gameplay, AI behaviour, and level design. Final set dressing, lighting, and optimisation are complete, taking the project from greybox through to a fully realised playable environment",
+   "resp": "Designed the level from concept art to final playable environment. Created the initial blockout and refined gameplay flow. Built gameplay systems using Blueprints. Developed enemy AI and combat encounters. Refined enemy placement, combat pacing, and player progression. Built the environment using Fab Marketplace assets. Created in-game cinematics using Unreal Sequencer. Currently testing, debugging, and optimising the project for the final build.",
+   "challenges": "One of the biggest challenges was refining the enemy AI while new gameplay features were still being added. I spent a lot of time testing combat encounters, adjusting enemy placement, patrol routes, and behaviour to improve the overall flow of each mission. As the project grew, debugging Blueprint systems and fixing issues between interconnected mechanics became a regular part of development, helping me build a more stable and organised project.",
+   "lessons": "This project gave me a much better understanding of how gameplay systems, AI, level design, and player progression work together. It also improved my Blueprint workflow, problem-solving, and level iteration process. During development, I also learned the fundamentals of Unreal Engine Sequencer, which helped me present gameplay moments and support the overall pacing of the project.",
+   "thumb": "images/aee7f4ea353fdfc4.webp",
+   "gallery": [
+    "images/aee7f4ea353fdfc4.webp",
+    "images/ece6e8e1d27394e4.webp",
+    "images/b4500d9d8890abf1.webp",
+    "images/4368d2b38889896c.webp",
+    "images/c447d87141b5f5d3.webp",
+    "images/4dfbfdf9ce480a99.webp",
+    "images/fa3f06e6bc4c4280.webp",
+    "images/7f3613919b99f01b.webp",
+    "images/d7bf1b0ed6f8fa46.webp"
+   ],
+   "tags": [
+    "UE5",
+    "BLUEPRINT",
+    "LEVEL DESIGN",
+    "GAMEPLAY & AI DESIGN",
+    "PLAYTESTING"
+   ],
+   "video": {
+    "label": "Gameplay Video",
+    "url": "https://youtu.be/48gaFhpSrlk"
+   },
+   "gameLink": null,
+   "links": [
+    {
+     "label": "Documentation link",
+     "url": "https://drive.google.com/file/d/1M7mZlCA4g2_XOpMwkfhBuRxLg9aw2W10/view?usp=sharing"
+    }
+   ],
+   "knownInBase": true
+  },
+  {
+   "id": 1785296427789,
+   "title": "Knight Fight",
+   "cat": "Level Design",
+   "type": "Level",
+   "desc": "Knight Fight is a collaborative university project built in Unreal Engine 5. Players battle as ghostly knights inside a Victorian mansion, using traps, health pickups, and ragdoll physics to knock each other out. I worked mainly on the level design, gameplay systems, lighting, and environment setup.",
+   "role": "Level Designer & Gameplay Programmer (Collaborative University Project)",
+   "timeline": "March 2026 – August 2026",
+   "genre": "Local Multiplayer Physics-Based Party Brawler",
+   "overview": "Knight Fight is a local multiplayer party game developed as a collaborative university project in Unreal Engine 5. Players take control of ghosts trapped inside knight armour and battle inside a Victorian mansion using environmental traps, ragdoll physics, and health pickups.\n\nInspired by games like Gang Beasts and BombSquad, the focus was on creating short, chaotic matches where the environment is just as dangerous as the other players.",
+   "resp": "Designed the Victorian mansion level from the initial blockout to the final gameplay layout.\nImplemented gameplay systems using Unreal Engine Blueprints.\nDeveloped the ragdoll system and integrated it with gameplay interactions.\nBuilt environmental hazards including flame traps, spike traps, oil hazards, and health pickups.\nDesigned and implemented the dynamic local multiplayer camera.\nCompleted level set dressing using assets created by the 3D artist.\nCreated the final lighting and post-processing to establish the Victorian atmosphere.\nBalanced player flow, trap placement, and gameplay spaces through iteration and testing.",
+   "challenges": "One of the biggest challenges was creating a level that stayed fun while supporting four-player local multiplayer. The camera, trap placement, and health pickup locations went through several iterations to keep the gameplay readable without reducing the chaotic feel.\n\nAnother challenge was working with limited concept art during development. Since there were very few visual sketches available, we relied on Victorian mansion references, gameplay references, and existing asset packs to guide the level design and environment.",
+   "lessons": "This was my first collaborative university project, and it gave me a much better understanding of how different disciplines come together during game development. Working closely with artists and programmers taught me the importance of communication, planning, and iteration. It also helped me improve my skills in level design, Blueprint gameplay systems, lighting, set dressing, and designing spaces around multiplayer gameplay.",
+   "thumb": "images/99c7067a33d68eed-thumb.webp",
+   "gallery": [
+    "images/99c7067a33d68eed.webp",
+    "images/ffd6b82eb516e93a.webp",
+    "images/b4cc3785f45ecf1a.webp",
+    "images/e2075c5a96c11c66.webp",
+    "images/b4cc3785f45ecf1a.webp",
+    "images/d2813e17f63e5aa1.webp",
+    "images/03350f9beb18c7e2.webp",
+    "images/edbe82678a39964a.webp",
+    "images/d1e4841d26204cbe.webp"
+   ],
+   "tags": [
+    "UE5",
+    "BLUEPRINT",
+    "LEVEL DESIGN",
+    "COLLABORATIVE PROJECT",
+    "MULTIPLAYER"
+   ],
+   "video": {
+    "label": "Gameplay Video",
+    "url": "https://www.youtube.com/watch?v=7PmD-EkIP1g"
+   },
+   "gameLink": {
+    "label": "Play the Game",
+    "url": "https://drive.google.com/drive/folders/1vIRiAz5o-boYNEr3eGu2QlOa53WmORs-?usp=sharing"
+   },
+   "links": [
+    {
+     "label": "Level Design Documentation link",
+     "url": "https://drive.google.com/file/d/1fCGvJC7kKqUeCw4_FnhUzFBttA4efcAV/view?usp=drive_link"
+    }
+   ],
+   "knownInBase": true
+  },
+  {
+   "id": 1785618911849,
+   "title": "NIGHTCLUB FIGHT ARENA",
+   "cat": "Level Design",
+   "type": "Level",
+   "desc": "A freelance Unreal Engine 5 project created for a studio client. The project involved designing and building a nightclub combat arena from blockout to the final environment using Fab assets. My responsibilities included level layout, environment art, set dressing, lighting, optimisation, and polishing the scene to create a visually engaging and gameplay-ready space.",
+   "role": "Level Designer / Environment Artist",
+   "timeline": "2025",
+   "genre": "Action • Combat Arena",
+   "overview": "A freelance environment build for a studio client — a nightclub designed to double as a close-quarters combat arena. I took it from blockout through to final set dressing using Fab Marketplace assets, handling level layout, lighting, and optimisation while working closely with the client throughout.",
+   "resp": "Created the initial blockout for the nightclub layout. Built the environment using Fab Marketplace assets. Completed the final set dressing with furniture, stage props, lighting fixtures, and environmental details. Developed the lighting to create a nightclub atmosphere while keeping the level readable for gameplay. Optimised the environment to maintain good performance. Refined the level through regular feedback from the client.",
+   "challenges": "Making it read as a real nightclub while still functioning as a combat space was the main tension — too much dressing and player movement suffers, too little and it feels empty. Lighting took the most iteration: testing colours, intensities, and placement until it matched the atmosphere the client wanted without losing readability in the areas that mattered for gameplay.",
+   "lessons": "Sharpened my blockout-to-final workflow and, more importantly, my ability to balance level design against lighting and performance rather than treating them separately. Working directly with the client throughout also made me quicker at adapting to feedback mid-build instead of waiting until a review milestone.",
+   "thumb": "images/49a2899d354bf535-thumb.webp",
+   "gallery": [
+    "images/edfadf2ee4235a8e.webp",
+    "images/e40fe0533d95da87.webp",
+    "images/5f2884e743841b87.webp",
+    "images/112fdc8455f11b5a.webp",
+    "images/17419783332bcebc.webp",
+    "images/516af810cd1784cc.webp",
+    "images/49a2899d354bf535.webp",
+    "images/2b994cf1c065f986.webp",
+    "images/27765886620cc68a.webp",
+    "images/319edfd014c5f373.webp",
+    "images/b787bf99b35a2bab.webp",
+    "images/a07760650341a365.webp"
+   ],
+   "tags": [
+    "UE5",
+    "Modular Assets",
+    "LEVEL DESIGN",
+    "OPTIMIZATION"
+   ],
+   "video": null,
+   "gameLink": null,
+   "links": [],
+   "knownInBase": true
+  },
+  {
+   "id": 1785713142016,
+   "title": "Echoes Beyond The Hill",
+   "cat": "GAMEPLAY",
+   "type": "Level",
+   "desc": "A 2D platformer developed in Unreal Engine 5, focusing on level design, Blueprint gameplay systems, and creating a polished gameplay experience.",
+   "role": "Game Designer / Level Designer / Game Programmer",
+   "timeline": "4 weeks",
+   "genre": "2D Platformer",
+   "overview": "Echoes Beyond The Hill is my first 2D game, created in Unreal Engine 5 as a personal project. I wanted to learn the complete workflow of developing a 2D platformer because I have ideas for a future 2D game of my own. Rather than jumping straight into that project, I used this as an opportunity to understand 2D gameplay, level design, Blueprint systems, and player progression. I also built the environment using modular assets so they could be reused in future projects.",
+   "resp": "Designed and built the game levels. Developed gameplay systems using Blueprints. Created platforming sections and puzzle mechanics. Implemented player interactions and checkpoints. Tested and refined the gameplay based on feedback. Polished the game before the final submission.",
+   "challenges": "Coming from a 3D background, learning how to design for a 2D platformer was a completely different experience. I had to think more carefully about jump distances, player movement, enemy placement, and how each level introduced new mechanics. I also designed the environment using modular pieces so I could quickly make changes and reuse assets without rebuilding sections from scratch.",
+   "lessons": "This project gave me a solid understanding of 2D game development and helped me become more confident designing gameplay in a different perspective. It also reinforced the value of planning modular assets early in development, making future levels easier to build and iterate on. Most importantly, it gave me the knowledge and confidence to start developing the 2D game idea I originally wanted to create.",
+   "thumb": "images/b596ae52159b3e0a-thumb.webp",
+   "gallery": [
+    "images/b596ae52159b3e0a.webp",
+    "images/0512519f9b096aeb.webp",
+    "images/76eb4f6e8e328424.webp"
+   ],
+   "tags": [
+    "UE5",
+    "BLUEPRINTS",
+    "PIXEL ART",
+    "BOSS FIGHT"
+   ],
+   "video": {
+    "label": "Gameplay Video",
+    "url": "https://youtu.be/taXWiXmqguA"
+   },
+   "gameLink": {
+    "label": "Play the Game",
+    "url": "https://rahulachu.itch.io/echoes-beyond-the-hills"
+   },
+   "links": [
+    {
+     "label": "Documentation link",
+     "url": "https://drive.google.com/file/d/1yRi19QjF9QFwVGNE5jAUBu75-UfTt5vb/view?usp=sharing"
+    }
+   ],
+   "knownInBase": true
+  },
+  {
+   "id": 1785296628925,
+   "title": "Boss Arena",
+   "cat": "ENVIRONEMNTAL ART",
+   "type": "Level",
+   "desc": "A boss combat arena built for an in-development O-Sens Studio title — took it from blockout to final environment with Quixel Megascans, shaping the space around the encounter while matching the game's visual style.",
+   "role": "Level Designer / Environment Artist",
+   "timeline": "2024",
+   "genre": "Action • Boss Arena",
+   "overview": "Built for an in-development title at O-Sens Studio — took a boss combat arena from blockout to final environment using Quixel Megascans, matching the game's visual style while leaving enough room for the team's gameplay systems to actually work.\n\nI owned the level layout, set dressing, and overall composition. The arena went through several rounds of rework as gameplay requirements shifted, which was my first real taste of iterating inside an established studio pipeline rather than on my own.",
+   "resp": "Created the initial blockout for the boss arena.\nBuilt the environment using Quixel Megascans and modular assets.\nCompleted the final set dressing with rocks, ruins, vegetation, and environmental props.\nRefined the arena layout based on gameplay and team feedback.\nWorked with the team to ensure the environment matched the project's visual direction.\nOrganised the level to make future changes and iterations easier.",
+   "challenges": "The tension was between dressing the arena to feel finished and keeping it open enough for combat to actually work — every asset added risked eating into space the gameplay systems needed. Getting the balance right took several passes of asset placement and composition before the layout held up.",
+   "lessons": "First real experience taking a level from blockout to finished environment inside a professional studio, and it built real confidence with composition, set dressing, and Quixel Megascans. Mostly, though, it taught me how much a level can change mid-development — staying adaptable to designer feedback mattered more than getting it right the first time.",
+   "thumb": "images/b5e3e529ca00fb87-thumb.webp",
+   "gallery": [
+    "images/b5e3e529ca00fb87.webp",
+    "images/9dc9b08bcc0e9823.webp",
+    "images/4f478bd3bff6d37b.webp"
+   ],
+   "tags": [
+    "UE5",
+    "LEVEL DESIGN",
+    "ENVIRONEMNTAL ART"
+   ],
+   "video": {
+    "label": "Gameplay Video",
+    "url": "https://youtu.be/XD4LTOiFoJY"
+   },
+   "gameLink": null,
+   "links": [],
+   "knownInBase": true
+  },
+  {
+   "id": 1785713272017,
+   "title": "Boss Arena",
+   "cat": "Environment",
+   "type": "Level",
+   "desc": "A boss combat arena built for an in-development O-Sens Studio title — took it from blockout to final environment with Quixel Megascans, shaping the space around the encounter while matching the game's visual style.",
+   "role": "Level Designer / Environment Artist",
+   "timeline": "2024",
+   "genre": "Action • Boss Arena",
+   "overview": "Built for an in-development title at O-Sens Studio — took a boss combat arena from blockout to final environment using Quixel Megascans, matching the game's visual style while leaving enough room for the team's gameplay systems to actually work.\n\nI owned the level layout, set dressing, and overall composition. The arena went through several rounds of rework as gameplay requirements shifted, which was my first real taste of iterating inside an established studio pipeline rather than on my own.",
+   "resp": "Created the initial blockout for the boss arena.\nBuilt the environment using Quixel Megascans and modular assets.\nCompleted the final set dressing with rocks, ruins, vegetation, and environmental props.\nRefined the arena layout based on gameplay and team feedback.\nWorked with the team to ensure the environment matched the project's visual direction.\nOrganised the level to make future changes and iterations easier.",
+   "challenges": "The tension was between dressing the arena to feel finished and keeping it open enough for combat to actually work — every asset added risked eating into space the gameplay systems needed. Getting the balance right took several passes of asset placement and composition before the layout held up.",
+   "lessons": "First real experience taking a level from blockout to finished environment inside a professional studio, and it built real confidence with composition, set dressing, and Quixel Megascans. Mostly, though, it taught me how much a level can change mid-development — staying adaptable to designer feedback mattered more than getting it right the first time.",
+   "thumb": "images/b5e3e529ca00fb87-thumb.webp",
+   "gallery": [
+    "images/b5e3e529ca00fb87.webp",
+    "images/9dc9b08bcc0e9823.webp",
+    "images/4f478bd3bff6d37b.webp"
+   ],
+   "tags": [
+    "UE5",
+    "LEVEL DESIGN",
+    "ENVIRONEMNTAL ART"
+   ],
+   "video": {
+    "label": "Gameplay Video",
+    "url": "https://youtu.be/XD4LTOiFoJY"
+   },
+   "gameLink": null,
+   "links": [],
+   "knownInBase": true
+  },
+  {
+   "id": 1785296539819,
+   "title": "The Boys: Ascent",
+   "cat": "FREELANCE",
+   "type": "GAEMPLAY",
+   "desc": "The Boys: Ascent was a freelance Unreal Engine 5 project inspired by The Boys. I joined the project to develop Homelander's gameplay systems, optimize the City Sample map, and help with level design where needed. The project has since been completed and shipped.",
+   "role": "Gameplay Programmer / Level Designer",
+   "timeline": "2024",
+   "genre": "Open-World Action",
+   "overview": "The Boys: Ascent is a freelance Unreal Engine 5 project inspired by The Boys. I joined the project to develop gameplay systems for Homelander, optimise the City Sample map, and support level design where needed. The project gave me the opportunity to work on a large open-world environment while collaborating directly with an international client. It also became my first shipped freelance project, giving me valuable experience working within a real production pipeline.",
+   "resp": "Developed Homelander's gameplay systems using Unreal Engine Blueprints. Implemented and refined character mechanics based on client feedback. Optimised the City Sample environment to improve performance. Assisted with level design and environment changes where required. Identified and fixed Blueprint issues throughout development. Worked directly with the client, delivering regular updates and implementing requested changes.",
+   "challenges": "The biggest challenge was working with the City Sample project. Its large scale and high asset density affected performance, especially while adding new gameplay features. I spent time profiling the level, removing unnecessary overhead, and optimising the environment so gameplay remained smooth without changing the overall look of the city. Another challenge was developing gameplay systems that matched the client's vision. Regular feedback sessions helped refine the mechanics and improve the overall experience before delivery.",
+   "lessons": "This project gave me my first experience delivering a freelance Unreal Engine project from start to finish. I became more confident building Blueprint gameplay systems, working with large environments, and communicating with a client throughout development. It also reinforced the importance of optimisation and testing when working on open-world projects.",
+   "thumb": "images/272716948e2482ed-thumb.webp",
+   "gallery": [
+    "images/9166ee3a76f6a685.webp",
+    "images/d2e244972f718737.webp",
+    "images/43180840cf8cd5d2.webp"
+   ],
+   "tags": [
+    "UE5",
+    "BLUEPRINTS",
+    "LEVEL DESIGN",
+    "OPTIMIZATION"
+   ],
+   "video": {
+    "label": "Gameplay Video",
+    "url": "https://youtu.be/p0xtXNiSvQM"
+   },
+   "gameLink": {
+    "label": "Play the Game",
+    "url": "https://discord.com/invite/YX2bxU83St"
+   },
+   "links": [],
+   "knownInBase": true
+  },
+  {
+   "id": 1785618916249,
+   "title": "EUROPEAN TOWN CINEMATIC ENVIRONMENT",
+   "cat": "FREELANCE",
+   "type": "ENVIRONEMNTAL ART",
+   "desc": "A realistic European riverside town built freelance for a Canadian client's cinematic short film — blockout to final set dressing using the client's Fab Marketplace assets, with scenes prepared specifically for camera.",
+   "role": "Level Designer / Environment Artist",
+   "timeline": "2024",
+   "genre": "Cinematic / Short Film",
+   "overview": "A freelance build for a Canadian client's cinematic short film — a realistic European riverside town, taken from blockout to final set dressing using assets the client provided through Fab Marketplace.\n\nBeyond layout and dressing, most of the work was in composition and lighting: preparing the scenes specifically for the camera shots the film needed, not for free-roam gameplay.",
+   "resp": "Created the initial blockout for the town layout.\nBuilt the environment using client-provided assets from the Fab Marketplace.\nCompleted the final set dressing with buildings, vegetation, props, and environmental details.\nDeveloped the lighting to create a realistic cinematic atmosphere.\nPrepared the environment for cinematic camera shots.\nOptimised the level while maintaining visual quality.\nWorked closely with the client, refining the environment through multiple feedback sessions.",
+   "challenges": "Cinematic work raises the bar on consistency — every camera angle needed to hold up, with no empty gaps or repeated details visible in frame, which is a different discipline than dressing a space just for gameplay traversal.\n\nThe client's asset library was large and varied, so a good chunk of time went into layout and lighting adjustments just to make everything read as one coherent place rather than a pile of separate packs, all while keeping the level light enough to run smoothly.",
+   "lessons": "My first real depth in cinematic-specific environment work rather than gameplay spaces — it sharpened how I think about composition and lighting when a fixed camera, not a moving player, is the audience. Working directly with an international client end-to-end also made me faster at turning feedback into revisions.",
+   "thumb": "images/6ad57e39d10f0bf4-thumb.webp",
+   "gallery": [
+    "images/dd79b08286caf1dc.webp",
+    "images/0270cd1cf437ef57.webp",
+    "images/6ad57e39d10f0bf4.webp"
+   ],
+   "tags": [
+    "UE5",
+    "Cinematic",
+    "Modular Assets"
+   ],
+   "video": null,
+   "gameLink": null,
+   "links": [],
+   "knownInBase": true
+  },
+  {
+   "id": 1785345903031,
+   "title": "Hidden Cave",
+   "cat": "Environment",
+   "type": "ENVIRONEMNTAL ART",
+   "desc": "A cave environment built for cinematic shots on an in-development O-Sens Studio project — blockout to final set dressing with Quixel Megascans, focused on composition and lighting rather than gameplay.",
+   "role": "Environment Artist / Level Designer",
+   "timeline": "2024",
+   "genre": "Cinematic Environment",
+   "overview": "My first project after joining O-Sens Studio — a cave environment built for cinematic shots rather than gameplay, taken from blockout to final set dressing using Quixel Megascans. I owned the scene composition, dressing, and lighting, all aimed at matching the project's established visual direction.",
+   "resp": "Created the initial blockout for the cave environment. Built the environment using Quixel Megascans and modular assets. Completed the final set dressing with rocks, vegetation, and environmental props. Worked on the lighting to establish the mood of the scene. Refined the environment through multiple iterations based on team feedback. Organised the level to support future updates during production.",
+   "challenges": "Getting the cave to feel like a natural formation rather than an obviously arranged set was the main challenge, especially with every angle needing to hold up as its own cinematic shot. Rock formations, vegetation, and asset placement all went through repeated adjustment, and lighting took several more passes before it matched the mood the team was after.",
+   "lessons": "As my first project on a professional team, this was really where I learned that environments get built through rounds of feedback and iteration, not a single pass — and it's where my blockout-to-final workflow with Quixel Megascans actually started to solidify.",
+   "thumb": "images/4ed231622beb7cfe-thumb.webp",
+   "gallery": [
+    "images/b804c94e215f159d.webp",
+    "images/465d4a74c4a83597.webp",
+    "images/dcd706a7f357659c.webp"
+   ],
+   "tags": [
+    "UE5",
+    "LEVEL DESIGN",
+    "ENVIRONEMNTAL ART"
+   ],
+   "video": null,
+   "gameLink": null,
+   "links": [],
+   "knownInBase": true
+  },
+  {
+   "id": 1785694019386,
+   "title": "The Boys: Ascent",
+   "cat": "FREELANCE",
+   "type": "GAEMPLAY",
+   "desc": "The Boys: Ascent was a freelance Unreal Engine 5 project inspired by The Boys. I joined the project to develop Homelander's gameplay systems, optimize the City Sample map, and help with level design where needed. The project has since been completed and shipped.",
+   "role": "Gameplay Programmer / Level Designer",
+   "timeline": "2024",
+   "genre": "Open-World Action",
+   "overview": "The Boys: Ascent is a freelance Unreal Engine 5 project inspired by The Boys. I joined the project to develop gameplay systems for Homelander, optimise the City Sample map, and support level design where needed. The project gave me the opportunity to work on a large open-world environment while collaborating directly with an international client. It also became my first shipped freelance project, giving me valuable experience working within a real production pipeline.",
+   "resp": "Developed Homelander's gameplay systems using Unreal Engine Blueprints. Implemented and refined character mechanics based on client feedback. Optimised the City Sample environment to improve performance. Assisted with level design and environment changes where required. Identified and fixed Blueprint issues throughout development. Worked directly with the client, delivering regular updates and implementing requested changes.",
+   "challenges": "The biggest challenge was working with the City Sample project. Its large scale and high asset density affected performance, especially while adding new gameplay features. I spent time profiling the level, removing unnecessary overhead, and optimising the environment so gameplay remained smooth without changing the overall look of the city. Another challenge was developing gameplay systems that matched the client's vision. Regular feedback sessions helped refine the mechanics and improve the overall experience before delivery.",
+   "lessons": "This project gave me my first experience delivering a freelance Unreal Engine project from start to finish. I became more confident building Blueprint gameplay systems, working with large environments, and communicating with a client throughout development. It also reinforced the importance of optimisation and testing when working on open-world projects.",
+   "thumb": "images/272716948e2482ed-thumb.webp",
+   "gallery": [
+    "images/9166ee3a76f6a685.webp",
+    "images/d2e244972f718737.webp",
+    "images/43180840cf8cd5d2.webp"
+   ],
+   "tags": [
+    "UE5",
+    "BLUEPRINTS",
+    "LEVEL DESIGN",
+    "OPTIMIZATION"
+   ],
+   "video": {
+    "label": "Gameplay Video",
+    "url": "https://youtu.be/p0xtXNiSvQM"
+   },
+   "gameLink": {
+    "label": "Play the Game",
+    "url": "https://discord.com/invite/YX2bxU83St"
+   },
+   "links": [],
+   "knownInBase": true
+  },
+  {
+   "id": 1785694031264,
+   "title": "Boss Arena",
+   "cat": "ENVIRONEMNTAL ART",
+   "type": "Level",
+   "desc": "A boss combat arena built for an in-development O-Sens Studio title — took it from blockout to final environment with Quixel Megascans, shaping the space around the encounter while matching the game's visual style.",
+   "role": "Level Designer / Environment Artist",
+   "timeline": "2024",
+   "genre": "Action • Boss Arena",
+   "overview": "Built for an in-development title at O-Sens Studio — took a boss combat arena from blockout to final environment using Quixel Megascans, matching the game's visual style while leaving enough room for the team's gameplay systems to actually work.\n\nI owned the level layout, set dressing, and overall composition. The arena went through several rounds of rework as gameplay requirements shifted, which was my first real taste of iterating inside an established studio pipeline rather than on my own.",
+   "resp": "Created the initial blockout for the boss arena.\nBuilt the environment using Quixel Megascans and modular assets.\nCompleted the final set dressing with rocks, ruins, vegetation, and environmental props.\nRefined the arena layout based on gameplay and team feedback.\nWorked with the team to ensure the environment matched the project's visual direction.\nOrganised the level to make future changes and iterations easier.",
+   "challenges": "The tension was between dressing the arena to feel finished and keeping it open enough for combat to actually work — every asset added risked eating into space the gameplay systems needed. Getting the balance right took several passes of asset placement and composition before the layout held up.",
+   "lessons": "First real experience taking a level from blockout to finished environment inside a professional studio, and it built real confidence with composition, set dressing, and Quixel Megascans. Mostly, though, it taught me how much a level can change mid-development — staying adaptable to designer feedback mattered more than getting it right the first time.",
+   "thumb": "images/b5e3e529ca00fb87-thumb.webp",
+   "gallery": [
+    "images/b5e3e529ca00fb87.webp",
+    "images/9dc9b08bcc0e9823.webp",
+    "images/4f478bd3bff6d37b.webp"
+   ],
+   "tags": [
+    "UE5",
+    "LEVEL DESIGN",
+    "ENVIRONEMNTAL ART"
+   ],
+   "video": {
+    "label": "Gameplay Video",
+    "url": "https://youtu.be/XD4LTOiFoJY"
+   },
+   "gameLink": null,
+   "links": [],
+   "knownInBase": true
+  },
+  {
+   "id": 1785694036120,
+   "title": "EUROPEAN TOWN CINEMATIC ENVIRONMENT",
+   "cat": "FREELANCE",
+   "type": "ENVIRONEMNTAL ART",
+   "desc": "A realistic European riverside town built freelance for a Canadian client's cinematic short film — blockout to final set dressing using the client's Fab Marketplace assets, with scenes prepared specifically for camera.",
+   "role": "Level Designer / Environment Artist",
+   "timeline": "2024",
+   "genre": "Cinematic / Short Film",
+   "overview": "A freelance build for a Canadian client's cinematic short film — a realistic European riverside town, taken from blockout to final set dressing using assets the client provided through Fab Marketplace.\n\nBeyond layout and dressing, most of the work was in composition and lighting: preparing the scenes specifically for the camera shots the film needed, not for free-roam gameplay.",
+   "resp": "Created the initial blockout for the town layout.\nBuilt the environment using client-provided assets from the Fab Marketplace.\nCompleted the final set dressing with buildings, vegetation, props, and environmental details.\nDeveloped the lighting to create a realistic cinematic atmosphere.\nPrepared the environment for cinematic camera shots.\nOptimised the level while maintaining visual quality.\nWorked closely with the client, refining the environment through multiple feedback sessions.",
+   "challenges": "Cinematic work raises the bar on consistency — every camera angle needed to hold up, with no empty gaps or repeated details visible in frame, which is a different discipline than dressing a space just for gameplay traversal.\n\nThe client's asset library was large and varied, so a good chunk of time went into layout and lighting adjustments just to make everything read as one coherent place rather than a pile of separate packs, all while keeping the level light enough to run smoothly.",
+   "lessons": "My first real depth in cinematic-specific environment work rather than gameplay spaces — it sharpened how I think about composition and lighting when a fixed camera, not a moving player, is the audience. Working directly with an international client end-to-end also made me faster at turning feedback into revisions.",
+   "thumb": "images/6ad57e39d10f0bf4-thumb.webp",
+   "gallery": [
+    "images/dd79b08286caf1dc.webp",
+    "images/0270cd1cf437ef57.webp",
+    "images/6ad57e39d10f0bf4.webp"
+   ],
+   "tags": [
+    "UE5",
+    "Cinematic",
+    "Modular Assets"
+   ],
+   "video": null,
+   "gameLink": null,
+   "links": [],
+   "knownInBase": true
+  },
+  {
+   "id": 1785713222162,
+   "title": "Echoes Beyond The Hill",
+   "cat": "Level Design",
+   "type": "Level",
+   "desc": "A 2D platformer developed in Unreal Engine 5, focusing on level design, Blueprint gameplay systems, and creating a polished gameplay experience.",
+   "role": "Game Designer / Level Designer / Game Programmer",
+   "timeline": "4 weeks",
+   "genre": "2D Platformer",
+   "overview": "Echoes Beyond The Hill is my first 2D game, created in Unreal Engine 5 as a personal project. I wanted to learn the complete workflow of developing a 2D platformer because I have ideas for a future 2D game of my own. Rather than jumping straight into that project, I used this as an opportunity to understand 2D gameplay, level design, Blueprint systems, and player progression. I also built the environment using modular assets so they could be reused in future projects.",
+   "resp": "Designed and built the game levels. Developed gameplay systems using Blueprints. Created platforming sections and puzzle mechanics. Implemented player interactions and checkpoints. Tested and refined the gameplay based on feedback. Polished the game before the final submission.",
+   "challenges": "Coming from a 3D background, learning how to design for a 2D platformer was a completely different experience. I had to think more carefully about jump distances, player movement, enemy placement, and how each level introduced new mechanics. I also designed the environment using modular pieces so I could quickly make changes and reuse assets without rebuilding sections from scratch.",
+   "lessons": "This project gave me a solid understanding of 2D game development and helped me become more confident designing gameplay in a different perspective. It also reinforced the value of planning modular assets early in development, making future levels easier to build and iterate on. Most importantly, it gave me the knowledge and confidence to start developing the 2D game idea I originally wanted to create.",
+   "thumb": "images/b596ae52159b3e0a-thumb.webp",
+   "gallery": [
+    "images/b596ae52159b3e0a.webp",
+    "images/0512519f9b096aeb.webp",
+    "images/76eb4f6e8e328424.webp"
+   ],
+   "tags": [
+    "UE5",
+    "BLUEPRINTS",
+    "PIXEL ART",
+    "BOSS FIGHT"
+   ],
+   "video": {
+    "label": "Gameplay Video",
+    "url": "https://youtu.be/taXWiXmqguA"
+   },
+   "gameLink": {
+    "label": "Play the Game",
+    "url": "https://rahulachu.itch.io/echoes-beyond-the-hills"
+   },
+   "links": [
+    {
+     "label": "Documentation link",
+     "url": "https://drive.google.com/file/d/1yRi19QjF9QFwVGNE5jAUBu75-UfTt5vb/view?usp=sharing"
+    }
+   ],
+   "knownInBase": true
+  },
+  {
+   "id": 1785296528075,
+   "title": "Gauntlet Mania",
+   "cat": "GAMEPLAY",
+   "type": "GAMEPLAY",
+   "desc": "A fast-paced arena combat prototype built in Unreal Engine 5 using Blueprints. The project focuses on directional combat, cinematic finishers, dynamic camera work, and layered visual and audio feedback to create satisfying and responsive gameplay.",
+   "role": "Game Designer / Level Designer / Game Programer",
+   "timeline": "8 weeks",
+   "genre": "Arena Combat",
+   "overview": "Gauntlet Mania is an arena combat prototype developed in Unreal Engine 5 using Blueprints for the Game Feel & Polish module. The project explores how layered gameplay feedback can improve the feel of combat. Players survive a 180-second arena challenge while fighting enemies with directional attacks, cinematic finishers, and responsive visual, audio, and camera feedback.",
+   "resp": "Designing and implementing the combat system using Blueprints. Creating directional punch and kick attacks. Developing the enemy spawning system and random attack behaviour. Implementing cinematic finishers with dynamic camera transitions. Adding combat feedback, including Niagara effects, hit stop, camera shake, and sound effects. Building the Start Menu, Game Over screen, timer, score system, and overall game flow. Dressing the arena level using modular assets and adding a crowd system to improve the atmosphere.",
+   "challenges": "One of the biggest challenges was making the combat feel responsive. Although the mechanics worked, the attacks initially lacked impact. To improve this, I layered different feedback systems such as hit stop, camera shake, Niagara effects, and sound effects. I also adjusted the timing of each element through playtesting until the combat felt more responsive and consistent.",
+   "lessons": "This project helped me understand how much small details contribute to the overall player experience. I gained practical experience building gameplay systems in Blueprints, balancing combat through iteration, and using visual and audio feedback to support gameplay rather than simply decorate it. It also reinforced the importance of regular playtesting and making small improvements throughout development instead of waiting until the end.",
+   "thumb": "images/059f8a61fc40e0ae-thumb.webp",
+   "gallery": [
+    "images/059f8a61fc40e0ae.webp",
+    "images/e4b7ce36646cc394.webp",
+    "images/6aac04c69a5f27af.webp"
+   ],
+   "tags": [
+    "UE5",
+    "BLUEPRINTS",
+    "COMBAT SYSTEM",
+    "GAME FEEL"
+   ],
+   "video": {
+    "label": "Gameplay Video",
+    "url": "https://youtu.be/faKVibi0Jt0"
+   },
+   "gameLink": {
+    "label": "Play the Game",
+    "url": "https://rahulachu.itch.io/gauntlet-mania"
+   },
+   "links": [
+    {
+     "label": "Documentation link",
+     "url": "https://drive.google.com/file/d/1HmBPqGsw4p4Q1MX0ti97VWWzyzSnVYnp/view?usp=sharing"
+    }
+   ],
+   "knownInBase": true
+  },
+  {
+   "id": 1785713259374,
+   "title": "EUROPEAN TOWN CINEMATIC ENVIRONMENT",
+   "cat": "Environment",
+   "type": "ENVIRONEMNTAL ART",
+   "desc": "A realistic European riverside town built freelance for a Canadian client's cinematic short film — blockout to final set dressing using the client's Fab Marketplace assets, with scenes prepared specifically for camera.",
+   "role": "Level Designer / Environment Artist",
+   "timeline": "2024",
+   "genre": "Cinematic / Short Film",
+   "overview": "A freelance build for a Canadian client's cinematic short film — a realistic European riverside town, taken from blockout to final set dressing using assets the client provided through Fab Marketplace.\n\nBeyond layout and dressing, most of the work was in composition and lighting: preparing the scenes specifically for the camera shots the film needed, not for free-roam gameplay.",
+   "resp": "Created the initial blockout for the town layout.\nBuilt the environment using client-provided assets from the Fab Marketplace.\nCompleted the final set dressing with buildings, vegetation, props, and environmental details.\nDeveloped the lighting to create a realistic cinematic atmosphere.\nPrepared the environment for cinematic camera shots.\nOptimised the level while maintaining visual quality.\nWorked closely with the client, refining the environment through multiple feedback sessions.",
+   "challenges": "Cinematic work raises the bar on consistency — every camera angle needed to hold up, with no empty gaps or repeated details visible in frame, which is a different discipline than dressing a space just for gameplay traversal.\n\nThe client's asset library was large and varied, so a good chunk of time went into layout and lighting adjustments just to make everything read as one coherent place rather than a pile of separate packs, all while keeping the level light enough to run smoothly.",
+   "lessons": "My first real depth in cinematic-specific environment work rather than gameplay spaces — it sharpened how I think about composition and lighting when a fixed camera, not a moving player, is the audience. Working directly with an international client end-to-end also made me faster at turning feedback into revisions.",
+   "thumb": "images/6ad57e39d10f0bf4-thumb.webp",
+   "gallery": [
+    "images/dd79b08286caf1dc.webp",
+    "images/0270cd1cf437ef57.webp",
+    "images/6ad57e39d10f0bf4.webp"
+   ],
+   "tags": [
+    "UE5",
+    "Cinematic",
+    "Modular Assets"
+   ],
+   "video": null,
+   "gameLink": null,
+   "links": [],
+   "knownInBase": true
+  },
+  {
+   "id": 1785346397975,
+   "title": "Forgotten Temple",
+   "cat": "Environment",
+   "type": "ENVIRONEMNTAL ART",
+   "desc": "An ancient temple environment built for KitBash3D's Secrets of the Luminara Challenge — blockout to final set dressing blending the Luminara kit with Quixel Megascans, built for cinematic presentation.",
+   "role": "Environment Artist / Level Designer",
+   "timeline": "2024",
+   "genre": "Cinematic Environment",
+   "overview": "A personal entry for KitBash3D's Secrets of the Luminara Challenge — I wanted to push myself on a full cinematic environment built entirely around the competition's ancient-civilisation theme. Took it from blockout to final set-dressed scene using the Luminara kit alongside Quixel Megascans, with most of the focus on composition and lighting good enough to hold up in still cinematic shots.",
+   "resp": "Planned the environment based on the challenge theme. Created the initial blockout for the temple layout. Built the environment using KitBash3D assets and Quixel Megascans. Completed the final set dressing with vegetation, rocks, ruins, and environmental details. Developed the lighting to create a realistic cinematic atmosphere. Optimised the level while maintaining visual quality. Refined the scene through multiple iterations before the final presentation.",
+   "challenges": "Mixing a stylised kit (Luminara) with photorealistic Megascans assets without the seams showing was the main problem — materials, vegetation, and lighting all needed adjusting until it read as one consistent world instead of two libraries bolted together. On top of that, the scene had to hold up from multiple cinematic angles, which meant testing several camera positions and lighting setups before landing on the final presentation.",
+   "lessons": "Built real confidence mixing KitBash3D with Quixel Megascans and planning scenes specifically for cinematic renders rather than gameplay. Working to a fixed competition brief was also a useful constraint — designing around a specific theme forced sharper decisions than building without any limits at all.",
+   "thumb": "images/4452a63e8562e986-thumb.webp",
+   "gallery": [
+    "images/90eda0caed051754.webp",
+    "images/4452a63e8562e986.webp",
+    "images/3756c4a8840b26b4.webp"
+   ],
+   "tags": [
+    "UE5",
+    "LEVEL DESIGN",
+    "ENVIRONEMNTAL ART"
+   ],
+   "video": null,
+   "gameLink": null,
+   "links": [],
+   "knownInBase": true
+  }
+ ],
+ "freelance": [
+  {
+   "id": 101,
+   "title": "NIGHTCLUB FIGHT ARENA",
+   "cat": "Level Design",
+   "type": "Level",
+   "desc": "A freelance Unreal Engine 5 project created for a studio client. The project involved designing and building a nightclub combat arena from blockout to the final environment using Fab assets. My responsibilities included level layout, environment art, set dressing, lighting, optimisation, and polishing the scene to create a visually engaging and gameplay-ready space.",
+   "role": "Level Designer / Environment Artist",
+   "timeline": "2025",
+   "genre": "Action • Combat Arena",
+   "overview": "A freelance environment build for a studio client — a nightclub designed to double as a close-quarters combat arena. I took it from blockout through to final set dressing using Fab Marketplace assets, handling level layout, lighting, and optimisation while working closely with the client throughout.",
+   "resp": "Created the initial blockout for the nightclub layout. Built the environment using Fab Marketplace assets. Completed the final set dressing with furniture, stage props, lighting fixtures, and environmental details. Developed the lighting to create a nightclub atmosphere while keeping the level readable for gameplay. Optimised the environment to maintain good performance. Refined the level through regular feedback from the client.",
+   "challenges": "Making it read as a real nightclub while still functioning as a combat space was the main tension — too much dressing and player movement suffers, too little and it feels empty. Lighting took the most iteration: testing colours, intensities, and placement until it matched the atmosphere the client wanted without losing readability in the areas that mattered for gameplay.",
+   "lessons": "Sharpened my blockout-to-final workflow and, more importantly, my ability to balance level design against lighting and performance rather than treating them separately. Working directly with the client throughout also made me quicker at adapting to feedback mid-build instead of waiting until a review milestone.",
+   "thumb": "images/49a2899d354bf535-thumb.webp",
+   "gallery": [
+    "images/edfadf2ee4235a8e.webp",
+    "images/e40fe0533d95da87.webp",
+    "images/5f2884e743841b87.webp",
+    "images/112fdc8455f11b5a.webp",
+    "images/17419783332bcebc.webp",
+    "images/516af810cd1784cc.webp",
+    "images/49a2899d354bf535.webp",
+    "images/2b994cf1c065f986.webp",
+    "images/27765886620cc68a.webp",
+    "images/319edfd014c5f373.webp",
+    "images/b787bf99b35a2bab.webp",
+    "images/a07760650341a365.webp"
+   ],
+   "tags": [
+    "UE5",
+    "Modular Assets",
+    "LEVEL DESIGN",
+    "OPTIMIZATION"
+   ],
+   "video": null,
+   "gameLink": null,
+   "links": [],
+   "knownInBase": false
+  },
+  {
+   "id": 102,
+   "title": "EUROPEAN TOWN CINEMATIC ENVIRONMENT",
+   "cat": "FREELANCE",
+   "type": "ENVIRONEMNTAL ART",
+   "desc": "A realistic European riverside town built freelance for a Canadian client's cinematic short film — blockout to final set dressing using the client's Fab Marketplace assets, with scenes prepared specifically for camera.",
+   "role": "Level Designer / Environment Artist",
+   "timeline": "2024",
+   "overview": "A freelance build for a Canadian client's cinematic short film — a realistic European riverside town, taken from blockout to final set dressing using assets the client provided through Fab Marketplace.\n\nBeyond layout and dressing, most of the work was in composition and lighting: preparing the scenes specifically for the camera shots the film needed, not for free-roam gameplay.",
+   "resp": "Created the initial blockout for the town layout.\nBuilt the environment using client-provided assets from the Fab Marketplace.\nCompleted the final set dressing with buildings, vegetation, props, and environmental details.\nDeveloped the lighting to create a realistic cinematic atmosphere.\nPrepared the environment for cinematic camera shots.\nOptimised the level while maintaining visual quality.\nWorked closely with the client, refining the environment through multiple feedback sessions.",
+   "challenges": "Cinematic work raises the bar on consistency — every camera angle needed to hold up, with no empty gaps or repeated details visible in frame, which is a different discipline than dressing a space just for gameplay traversal.\n\nThe client's asset library was large and varied, so a good chunk of time went into layout and lighting adjustments just to make everything read as one coherent place rather than a pile of separate packs, all while keeping the level light enough to run smoothly.",
+   "lessons": "My first real depth in cinematic-specific environment work rather than gameplay spaces — it sharpened how I think about composition and lighting when a fixed camera, not a moving player, is the audience. Working directly with an international client end-to-end also made me faster at turning feedback into revisions.",
+   "thumb": "images/6ad57e39d10f0bf4-thumb.webp",
+   "gallery": [
+    "images/dd79b08286caf1dc.webp",
+    "images/0270cd1cf437ef57.webp",
+    "images/6ad57e39d10f0bf4.webp"
+   ],
+   "tags": [
+    "UE5",
+    "Cinematic",
+    "Modular Assets"
+   ],
+   "video": null,
+   "gameLink": null,
+   "links": [],
+   "knownInBase": false
+  },
+  {
+   "id": 1785619191088,
+   "title": "The Boys: Ascent",
+   "cat": "FREELANCE",
+   "type": "GAEMPLAY",
+   "desc": "The Boys: Ascent was a freelance Unreal Engine 5 project inspired by The Boys. I joined the project to develop Homelander's gameplay systems, optimize the City Sample map, and help with level design where needed. The project has since been completed and shipped.",
+   "role": "Gameplay Programmer / Level Designer",
+   "timeline": "2024",
+   "genre": "Open-World Action",
+   "overview": "The Boys: Ascent is a freelance Unreal Engine 5 project inspired by The Boys. I joined the project to develop gameplay systems for Homelander, optimise the City Sample map, and support level design where needed. The project gave me the opportunity to work on a large open-world environment while collaborating directly with an international client. It also became my first shipped freelance project, giving me valuable experience working within a real production pipeline.",
+   "resp": "Developed Homelander's gameplay systems using Unreal Engine Blueprints. Implemented and refined character mechanics based on client feedback. Optimised the City Sample environment to improve performance. Assisted with level design and environment changes where required. Identified and fixed Blueprint issues throughout development. Worked directly with the client, delivering regular updates and implementing requested changes.",
+   "challenges": "The biggest challenge was working with the City Sample project. Its large scale and high asset density affected performance, especially while adding new gameplay features. I spent time profiling the level, removing unnecessary overhead, and optimising the environment so gameplay remained smooth without changing the overall look of the city. Another challenge was developing gameplay systems that matched the client's vision. Regular feedback sessions helped refine the mechanics and improve the overall experience before delivery.",
+   "lessons": "This project gave me my first experience delivering a freelance Unreal Engine project from start to finish. I became more confident building Blueprint gameplay systems, working with large environments, and communicating with a client throughout development. It also reinforced the importance of optimisation and testing when working on open-world projects.",
+   "thumb": "images/272716948e2482ed-thumb.webp",
+   "gallery": [
+    "images/9166ee3a76f6a685.webp",
+    "images/d2e244972f718737.webp",
+    "images/43180840cf8cd5d2.webp"
+   ],
+   "tags": [
+    "UE5",
+    "BLUEPRINTS",
+    "LEVEL DESIGN",
+    "OPTIMIZATION"
+   ],
+   "video": {
+    "label": "Gameplay Video",
+    "url": "https://youtu.be/p0xtXNiSvQM"
+   },
+   "gameLink": {
+    "label": "Play the Game",
+    "url": "https://discord.com/invite/YX2bxU83St"
+   },
+   "links": [],
+   "knownInBase": true
+  }
+ ],
+ "university": [
+  {
+   "id": 1785620861751,
+   "title": "The Broken Camp",
+   "cat": "Level Design",
+   "type": "Level",
+   "desc": "\"Third-person military shooter built solo in Unreal Engine 5.7. Level design centered on player guidance through environmental storytelling, layered combat encounters, and a fully greyboxed-to-final pipeline, built around gameplay systems designed first.\"",
+   "role": "Game Designer, Gameplay Programmer & Level Designer",
+   "timeline": "University Final Year Project (2026)",
+   "genre": "Single-Player Military Third-Person Shooter",
+   "overview": "This is my Final Year Project and the largest Unreal Engine project I have worked on so far. The goal was to develop a third-person shooter that brings together gameplay programming, level design, AI, mission systems, and environment production into a complete playable experience. The project is now complete, shaped by structured playtesting and multiple rounds of iteration on gameplay, AI behaviour, and level design. Final set dressing, lighting, and optimisation are complete, taking the project from greybox through to a fully realised playable environment",
+   "resp": "Designed the level from concept art to final playable environment. Created the initial blockout and refined gameplay flow. Built gameplay systems using Blueprints. Developed enemy AI and combat encounters. Refined enemy placement, combat pacing, and player progression. Built the environment using Fab Marketplace assets. Created in-game cinematics using Unreal Sequencer. Currently testing, debugging, and optimising the project for the final build.",
+   "challenges": "One of the biggest challenges was refining the enemy AI while new gameplay features were still being added. I spent a lot of time testing combat encounters, adjusting enemy placement, patrol routes, and behaviour to improve the overall flow of each mission. As the project grew, debugging Blueprint systems and fixing issues between interconnected mechanics became a regular part of development, helping me build a more stable and organised project.",
+   "lessons": "This project gave me a much better understanding of how gameplay systems, AI, level design, and player progression work together. It also improved my Blueprint workflow, problem-solving, and level iteration process. During development, I also learned the fundamentals of Unreal Engine Sequencer, which helped me present gameplay moments and support the overall pacing of the project.",
+   "thumb": "images/aee7f4ea353fdfc4.webp",
+   "gallery": [
+    "images/aee7f4ea353fdfc4.webp",
+    "images/ece6e8e1d27394e4.webp",
+    "images/b4500d9d8890abf1.webp",
+    "images/4368d2b38889896c.webp",
+    "images/c447d87141b5f5d3.webp",
+    "images/4dfbfdf9ce480a99.webp",
+    "images/fa3f06e6bc4c4280.webp",
+    "images/7f3613919b99f01b.webp",
+    "images/d7bf1b0ed6f8fa46.webp"
+   ],
+   "tags": [
+    "UE5",
+    "BLUEPRINT",
+    "LEVEL DESIGN",
+    "GAMEPLAY & AI DESIGN",
+    "PLAYTESTING"
+   ],
+   "video": {
+    "label": "Gameplay Video",
+    "url": "https://youtu.be/48gaFhpSrlk"
+   },
+   "gameLink": null,
+   "links": [
+    {
+     "label": "Documentation link",
+     "url": "https://drive.google.com/file/d/1M7mZlCA4g2_XOpMwkfhBuRxLg9aw2W10/view?usp=sharing"
+    }
+   ],
+   "knownInBase": true
+  },
+  {
+   "id": 1785619229066,
+   "title": "Knight Fight",
+   "cat": "Level Design",
+   "type": "Level",
+   "desc": "Knight Fight is a collaborative university project built in Unreal Engine 5. Players battle as ghostly knights inside a Victorian mansion, using traps, health pickups, and ragdoll physics to knock each other out. I worked mainly on the level design, gameplay systems, lighting, and environment setup.",
+   "role": "Level Designer & Gameplay Programmer (Collaborative University Project)",
+   "timeline": "March 2026 – August 2026",
+   "genre": "Local Multiplayer Physics-Based Party Brawler",
+   "overview": "Knight Fight is a local multiplayer party game developed as a collaborative university project in Unreal Engine 5. Players take control of ghosts trapped inside knight armour and battle inside a Victorian mansion using environmental traps, ragdoll physics, and health pickups.\n\nInspired by games like Gang Beasts and BombSquad, the focus was on creating short, chaotic matches where the environment is just as dangerous as the other players.",
+   "resp": "Designed the Victorian mansion level from the initial blockout to the final gameplay layout.\nImplemented gameplay systems using Unreal Engine Blueprints.\nDeveloped the ragdoll system and integrated it with gameplay interactions.\nBuilt environmental hazards including flame traps, spike traps, oil hazards, and health pickups.\nDesigned and implemented the dynamic local multiplayer camera.\nCompleted level set dressing using assets created by the 3D artist.\nCreated the final lighting and post-processing to establish the Victorian atmosphere.\nBalanced player flow, trap placement, and gameplay spaces through iteration and testing.",
+   "challenges": "One of the biggest challenges was creating a level that stayed fun while supporting four-player local multiplayer. The camera, trap placement, and health pickup locations went through several iterations to keep the gameplay readable without reducing the chaotic feel.\n\nAnother challenge was working with limited concept art during development. Since there were very few visual sketches available, we relied on Victorian mansion references, gameplay references, and existing asset packs to guide the level design and environment.",
+   "lessons": "This was my first collaborative university project, and it gave me a much better understanding of how different disciplines come together during game development. Working closely with artists and programmers taught me the importance of communication, planning, and iteration. It also helped me improve my skills in level design, Blueprint gameplay systems, lighting, set dressing, and designing spaces around multiplayer gameplay.",
+   "thumb": "images/99c7067a33d68eed-thumb.webp",
+   "gallery": [
+    "images/99c7067a33d68eed.webp",
+    "images/ffd6b82eb516e93a.webp",
+    "images/b4cc3785f45ecf1a.webp",
+    "images/e2075c5a96c11c66.webp",
+    "images/b4cc3785f45ecf1a.webp",
+    "images/d2813e17f63e5aa1.webp",
+    "images/03350f9beb18c7e2.webp",
+    "images/edbe82678a39964a.webp",
+    "images/d1e4841d26204cbe.webp"
+   ],
+   "tags": [
+    "UE5",
+    "BLUEPRINT",
+    "LEVEL DESIGN",
+    "COLLABORATIVE PROJECT",
+    "MULTIPLAYER"
+   ],
+   "video": {
+    "label": "Gameplay Video",
+    "url": "https://www.youtube.com/watch?v=7PmD-EkIP1g"
+   },
+   "gameLink": {
+    "label": "Play the Game",
+    "url": "https://drive.google.com/drive/folders/1vIRiAz5o-boYNEr3eGu2QlOa53WmORs-?usp=sharing"
+   },
+   "links": [
+    {
+     "label": "Level Design Documentation link",
+     "url": "https://drive.google.com/file/d/1fCGvJC7kKqUeCw4_FnhUzFBttA4efcAV/view?usp=drive_link"
+    }
+   ],
+   "knownInBase": true
+  },
+  {
+   "id": 1785619234567,
+   "title": "Gauntlet Mania",
+   "cat": "GAMEPLAY",
+   "type": "GAMEPLAY",
+   "desc": "A fast-paced arena combat prototype built in Unreal Engine 5 using Blueprints. The project focuses on directional combat, cinematic finishers, dynamic camera work, and layered visual and audio feedback to create satisfying and responsive gameplay.",
+   "role": "Game Designer / Level Designer / Game Programer",
+   "timeline": "8 weeks",
+   "genre": "Arena Combat",
+   "overview": "Gauntlet Mania is an arena combat prototype developed in Unreal Engine 5 using Blueprints for the Game Feel & Polish module. The project explores how layered gameplay feedback can improve the feel of combat. Players survive a 180-second arena challenge while fighting enemies with directional attacks, cinematic finishers, and responsive visual, audio, and camera feedback.",
+   "resp": "Designing and implementing the combat system using Blueprints. Creating directional punch and kick attacks. Developing the enemy spawning system and random attack behaviour. Implementing cinematic finishers with dynamic camera transitions. Adding combat feedback, including Niagara effects, hit stop, camera shake, and sound effects. Building the Start Menu, Game Over screen, timer, score system, and overall game flow. Dressing the arena level using modular assets and adding a crowd system to improve the atmosphere.",
+   "challenges": "One of the biggest challenges was making the combat feel responsive. Although the mechanics worked, the attacks initially lacked impact. To improve this, I layered different feedback systems such as hit stop, camera shake, Niagara effects, and sound effects. I also adjusted the timing of each element through playtesting until the combat felt more responsive and consistent.",
+   "lessons": "This project helped me understand how much small details contribute to the overall player experience. I gained practical experience building gameplay systems in Blueprints, balancing combat through iteration, and using visual and audio feedback to support gameplay rather than simply decorate it. It also reinforced the importance of regular playtesting and making small improvements throughout development instead of waiting until the end.",
+   "thumb": "images/059f8a61fc40e0ae-thumb.webp",
+   "gallery": [
+    "images/059f8a61fc40e0ae.webp",
+    "images/e4b7ce36646cc394.webp",
+    "images/6aac04c69a5f27af.webp"
+   ],
+   "tags": [
+    "UE5",
+    "BLUEPRINTS",
+    "COMBAT SYSTEM",
+    "GAME FEEL"
+   ],
+   "video": {
+    "label": "Gameplay Video",
+    "url": "https://youtu.be/faKVibi0Jt0"
+   },
+   "gameLink": {
+    "label": "Play the Game",
+    "url": "https://rahulachu.itch.io/gauntlet-mania"
+   },
+   "links": [
+    {
+     "label": "Documentation link",
+     "url": "https://drive.google.com/file/d/1HmBPqGsw4p4Q1MX0ti97VWWzyzSnVYnp/view?usp=sharing"
+    }
+   ],
+   "knownInBase": true
+  },
+  {
+   "id": 1785619240128,
+   "title": "Echoes Beyond The Hill",
+   "cat": "GAMEPLAY",
+   "type": "Level",
+   "desc": "A 2D platformer developed in Unreal Engine 5, focusing on level design, Blueprint gameplay systems, and creating a polished gameplay experience.",
+   "role": "Game Designer / Level Designer / Game Programmer",
+   "timeline": "4 weeks",
+   "genre": "2D Platformer",
+   "overview": "Echoes Beyond The Hill is my first 2D game, created in Unreal Engine 5 as a personal project. I wanted to learn the complete workflow of developing a 2D platformer because I have ideas for a future 2D game of my own. Rather than jumping straight into that project, I used this as an opportunity to understand 2D gameplay, level design, Blueprint systems, and player progression. I also built the environment using modular assets so they could be reused in future projects.",
+   "resp": "Designed and built the game levels. Developed gameplay systems using Blueprints. Created platforming sections and puzzle mechanics. Implemented player interactions and checkpoints. Tested and refined the gameplay based on feedback. Polished the game before the final submission.",
+   "challenges": "Coming from a 3D background, learning how to design for a 2D platformer was a completely different experience. I had to think more carefully about jump distances, player movement, enemy placement, and how each level introduced new mechanics. I also designed the environment using modular pieces so I could quickly make changes and reuse assets without rebuilding sections from scratch.",
+   "lessons": "This project gave me a solid understanding of 2D game development and helped me become more confident designing gameplay in a different perspective. It also reinforced the value of planning modular assets early in development, making future levels easier to build and iterate on. Most importantly, it gave me the knowledge and confidence to start developing the 2D game idea I originally wanted to create.",
+   "thumb": "images/b596ae52159b3e0a-thumb.webp",
+   "gallery": [
+    "images/b596ae52159b3e0a.webp",
+    "images/0512519f9b096aeb.webp",
+    "images/76eb4f6e8e328424.webp"
+   ],
+   "tags": [
+    "UE5",
+    "BLUEPRINTS",
+    "PIXEL ART",
+    "BOSS FIGHT"
+   ],
+   "video": {
+    "label": "Gameplay Video",
+    "url": "https://youtu.be/taXWiXmqguA"
+   },
+   "gameLink": {
+    "label": "Play the Game",
+    "url": "https://rahulachu.itch.io/echoes-beyond-the-hills"
+   },
+   "links": [
+    {
+     "label": "Documentation link",
+     "url": "https://drive.google.com/file/d/1yRi19QjF9QFwVGNE5jAUBu75-UfTt5vb/view?usp=sharing"
+    }
+   ],
+   "knownInBase": true
+  }
+ ],
+ "_other": {
+  "skillsData": {
+   "design": [
+    "Level Design",
+    "Environment Art",
+    "Combat System Design",
+    "Gameplay & AI Design",
+    "Game Design",
+    "Mission Design"
+   ],
+   "engine": [
+    "Unreal Engine 5",
+    "Blueprints",
+    "AI Behavior Trees",
+    "Performance Optimization",
+    "Niagara VFX",
+    "Data Layers",
+    "Level Streaming"
+   ],
+   "technical": [
+    "AI Behaviour Implementation",
+    "Dynamic Environment Loading",
+    "Blender (Basic Modeling)",
+    "Roblox Studio",
+    "Debugging",
+    "Rapid Prototyping"
+   ]
+  },
+  "timelineData": [
+   {
+    "role": "MSc Computer Game Design — Staffordshire University - UK",
+    "desc": "Postgraduate study in advanced game design, prototyping, gameplay systems, and professional practice, with hands-on level design and environment creation coursework.",
+    "date": "2025—2026"
+   },
+   {
+    "role": "Paid Research Study — Meta",
+    "desc": "Built a functional game prototype in Roblox Studio using AI tools within a short research task, comparing it against Unreal Engine for rapid prototyping and contributing insights to Meta's research on AI-assisted development.",
+    "date": "AUG 2025"
+   },
+   {
+    "role": "Level Designer / Unreal Engine Game Developer — O-Sens Studio",
+    "desc": "Designed and built UE5 levels focused on gameplay flow and pacing, including boss fight arenas, hidden caves, and temple courtyard environments, using Quixel Megascans and kitbashing techniques.",
+    "date": "2024—2025"
+   },
+   {
+    "role": "Freelance Game Developer — Self-Employed",
+    "desc": "Delivered level design, environment art, and combat/AI systems in Unreal Engine 5 for international clients, including Urban Trap Safehouse, an Unreal cinematic short film, and the released fan game The Boys: Ascent and more.",
+    "date": "2023—present"
+   },
+   {
+    "role": "B.Tech Computer Science with Big Data Visualization — SRM IST Ramapuram - INDIA",
+    "desc": "Graduated with 8.5 CGPA, building a foundation in computer science and data analytics alongside programming and research skills.",
+    "date": "2020—2024"
+   }
+  ],
+  "statsData": [
+   {
+    "num": "15+",
+    "label": "PROJECTS COMPLETED"
+   },
+   {
+    "num": "4",
+    "label": "Years Experience"
+   },
+   {
+    "num": "5",
+    "label": "Game Released"
+   },
+   {
+    "num": "5+",
+    "label": "Studios & Clients"
+   }
+  ],
+  "listsData": {
+   "software": [
+    "Unreal Engine 5",
+    "Blueprints (Visual Scripting)",
+    "Blender (basic modeling)",
+    "Roblox Studio",
+    "Perforce",
+    "Git / GitHub"
+   ],
+   "languages": [
+    "English",
+    "Hindi",
+    "Malayalam",
+    "Tamil"
+   ]
+  },
+  "linkGroups": [
+   [
+    101,
+    1785618911849,
+    1785619011096,
+    1785693965916
+   ],
+   [
+    102,
+    1785618916249,
+    1785619077626,
+    1785694036120,
+    1785713259374
+   ],
+   [
+    1785296528075,
+    1785619042543,
+    1785619234567,
+    1785621836258,
+    1785693990605
+   ],
+   [
+    1785296599451,
+    1785619046419,
+    1785619218057
+   ],
+   [
+    1785296427789,
+    1785619054444,
+    1785619229066,
+    1785693995023
+   ],
+   [
+    1785296628925,
+    1785619073193,
+    1785694031264,
+    1785713272017
+   ],
+   [
+    1785346397975,
+    1785619084104,
+    1785694043381
+   ],
+   [
+    1785345903031,
+    1785619093529,
+    1785619113072,
+    1785621048389,
+    1785694053777
+   ],
+   [
+    1785296539819,
+    1785619191088,
+    1785620921013,
+    1785694019386
+   ],
+   [
+    1785296379046,
+    1785619240128,
+    1785694006652,
+    1785713142016,
+    1785713222162
+   ],
+   [
+    1785348440771,
+    1785620847683,
+    1785620861751,
+    1785620908123,
+    1785621017470,
+    1785621135752,
+    1785693998752,
+    1785713242472
+   ]
+  ],
+  "heroKeys": {},
+  "heroImgs": {
+   "hero-portrait": "images/19e176633ca57739.webp"
+  }
+ }
+}

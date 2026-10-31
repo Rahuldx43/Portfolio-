@@ -1,0 +1,33 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "portfolio-static",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "C:\\Users\\rdx58\\AppData\\Local\\Temp\\claude\\D--claude-code-portfolio\\33b90587-3653-4628-8a0a-c043ed582ba7\\scratchpad\\static_server.js"
+      ],
+      "port": 8934
+    },
+    {
+      "name": "deploy-folder-test",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "C:\\Users\\rdx58\\AppData\\Local\\Temp\\claude\\D--claude-code-portfolio\\33b90587-3653-4628-8a0a-c043ed582ba7\\scratchpad\\strict_server.js",
+        "D:\\claude code portfolio\\Updated + Hospital Escape + Analytics (2026-10-31)",
+        "8935"
+      ],
+      "port": 8935
+    },
+    {
+      "name": "new-portfolio",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "C:\\Users\\rdx58\\AppData\\Local\\Temp\\claude\\D--claude-code-portfolio\\33b90587-3653-4628-8a0a-c043ed582ba7\\scratchpad\\strict_server.js",
+        "D:\\claude code portfolio\\New Portfolio Design (2026-10-31)",
+        "8936"
+      ],
+      "port": 8936
+    }
+  ]
+}
