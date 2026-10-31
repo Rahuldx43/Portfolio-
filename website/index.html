@@ -119,7 +119,10 @@
   .avail{display:inline-flex; align-items:center; gap:9px; font-size:14px; font-weight:600; color:var(--text); border:1px solid var(--edge); background:var(--surface); padding:5px 12px 5px 10px; margin-bottom:22px;}
   .avail::before{content:""; width:8px; height:8px; border-radius:50%; background:#3FCB7A; box-shadow:0 0 0 3px rgba(63,203,122,.22);}
   .hero-top{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.05fr); gap:32px 48px; align-items:center;}
-  .hero h1{font-size:clamp(50px, 6.6vw, 96px);}
+  /* The name is sized from its own column so the longest word ("Pranasseri", about 6.6x the font size in Archivo wide) always fits. */
+  .hero-top > div:first-child{container-type:inline-size; min-width:0;}
+  .hero h1{font-size:clamp(40px, 5.4vw, 84px);}
+  @supports (font-size:1cqi){ .hero h1{font-size:min(96px, 14.6cqi);} }
   .hero .lede{margin-top:20px;}
   .hero .actions{display:flex; flex-wrap:wrap; gap:12px; margin-top:28px;}
 
@@ -399,7 +402,8 @@
     .portrait{max-width:340px;}
     .numbers{grid-template-columns:repeat(2, minmax(0,1fr));}
   }
-  @media (max-width:760px){
+  /* Compact header: the menu links collapse into a Menu button once they no longer fit. */
+  @media (max-width:860px){
     .top .wrap{gap:10px;}
     .nav{display:none; position:absolute; top:64px; left:0; right:0; flex-direction:column; gap:0; background:var(--bg); border-bottom:2px solid var(--edge);}
     .nav.open{display:flex;}
@@ -407,6 +411,14 @@
     .nav a[aria-current="true"]::after{display:none;}
     .menu-btn{display:block;}
     .top .resume{display:none;}
+  }
+  @media (max-width:380px){
+    .brand{font-size:15px;}
+    .menu-btn{padding:5px 10px;}
+    .theme-btn{width:36px; height:36px;}
+    .top .wrap{gap:8px;}
+  }
+  @media (max-width:760px){
     .hero{padding-top:40px;}
     .map{aspect-ratio:auto; display:grid; gap:26px; padding:28px 20px 28px 52px; background-size:120px 120px,120px 120px,15px 15px,15px 15px;}
     .map svg.path{display:none;}
