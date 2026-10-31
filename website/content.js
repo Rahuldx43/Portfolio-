@@ -124,6 +124,7 @@ window.SITE = {
      gallery    all images shown in the case study
      tags       short skill tags
      video      YouTube link or ""
+     poster     optional picture shown behind the "Play video" button (defaults to the cover)
      play       link to play the game or ""
      playLabel  button text for the play link
      designDoc  link to the design document or ""
@@ -309,6 +310,7 @@ window.SITE = {
       "challenges": "The biggest challenge was working with the City Sample project. Its large scale and high asset density affected performance, especially while adding new gameplay features. I spent time profiling the level, removing unnecessary overhead, and optimising the environment so gameplay remained smooth without changing the overall look of the city. Another challenge was developing gameplay systems that matched the client's vision. Regular feedback sessions helped refine the mechanics and improve the overall experience before delivery.",
       "lessons": "This project gave me my first experience delivering a freelance Unreal Engine project from start to finish. I became more confident building Blueprint gameplay systems, working with large environments, and communicating with a client throughout development. It also reinforced the importance of optimisation and testing when working on open-world projects.",
       "cover": "images/272716948e2482ed-thumb.webp",
+    "poster": "images/9166ee3a76f6a685.webp",
       "process": [],
       "gallery": [
         "images/9166ee3a76f6a685.webp",

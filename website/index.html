@@ -265,7 +265,8 @@
   .case .links{display:flex; flex-wrap:wrap; gap:12px; margin:24px 0 8px;}
   .video{position:relative; aspect-ratio:16/9; max-width:100%; margin-top:28px; background:#000; border:2px solid var(--edge);}
   .video button{position:absolute; inset:0; border:none; padding:0; background:#000;}
-  .video button img{width:100%; height:100%; object-fit:cover; opacity:.7;}
+  .video button img{width:100%; height:100%; object-fit:cover; opacity:.8; transition:opacity .2s;}
+  .video button:hover img{opacity:.95;}
   .video button span{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); background:var(--accent); color:var(--on-accent); font-weight:750; padding:14px 22px;}
   .video iframe{position:absolute; inset:0; width:100%; height:100%; border:0;}
   .case .strip{margin-top:28px;}
@@ -649,7 +650,7 @@ function openCase(slug, push = true){
       <div><dt>Context</dt><dd>${esc(p.context)}</dd></div>
     </dl>
     ${links ? `<div class="links">${links}</div>` : ""}
-    ${id ? `<div class="video"><button data-yt="${id}" aria-label="Play ${esc(p.title)} video"><img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt=""><span>Play video</span></button></div>` : ""}
+    ${id ? `<div class="video"><button data-yt="${id}" aria-label="Play ${esc(p.title)} video">${img(p.poster || p.cover, "", "", "large")}<span>Play video</span></button></div>` : ""}
     ${p.process.length ? stripHTML(p) : ""}
     <div class="text">
       ${p.overview ? `<section class="full"><h3>Overview</h3>${paras(p.overview)}</section>` : ""}
