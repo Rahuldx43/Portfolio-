@@ -89,9 +89,37 @@
   /* ---------- hero ---------- */
   .hero{padding:60px 0 56px;}
   .hero .role{font-variation-settings:var(--wide); font-weight:750; font-size:clamp(20px, 2.2vw, 28px); color:var(--accent-text); margin-bottom:14px;}
-  .hero h1{font-size:clamp(50px, 8.6vw, 124px);}
+  .hero-top{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.05fr); gap:32px 48px; align-items:center;}
+  .hero h1{font-size:clamp(50px, 6.6vw, 96px);}
   .hero .lede{margin-top:20px;}
   .hero .actions{display:flex; flex-wrap:wrap; gap:12px; margin-top:28px;}
+
+  /* ---------- reel: auto-playing slides of the best shots ---------- */
+  .reel{margin:0;}
+  .reel-stage{position:relative; aspect-ratio:16/9; max-width:100%; background:#000; border:2px solid var(--edge); overflow:hidden; box-shadow:10px 10px 0 var(--shadow);}
+  .reel-slide{position:absolute; inset:0; width:100%; height:100%; padding:0; border:none; background:#000; opacity:0; transition:opacity .9s ease; cursor:pointer;}
+  .reel-slide.on{opacity:1; z-index:1;}
+  .reel-slide img{width:100%; height:100%; object-fit:cover;}
+  .reel-bar{display:flex; align-items:center; gap:10px; margin-top:12px; font-size:14px;}
+  .reel-label{font-weight:650; flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+  .reel-count{font-family:var(--mono); font-size:12.5px; color:var(--text-2);}
+  .reel-btn{width:32px; height:32px; display:grid; place-items:center; background:none; border:2px solid var(--edge); color:var(--text); font-size:15px; line-height:1;}
+  .reel-btn:hover{border-color:var(--accent); color:var(--accent-text);}
+  .reel-progress{height:2px; background:var(--line); margin-top:10px;}
+  .reel-progress i{display:block; height:100%; width:0; background:var(--accent);}
+  .reel-video{display:inline-block; margin-top:14px;}
+  @media (prefers-reduced-motion:no-preference){
+    .reel-slide.on img{animation:drift 6s ease-out both;}
+    @keyframes drift{from{transform:scale(1.06);} to{transform:scale(1);}}
+  }
+
+  /* ---------- design note (problem, change, result) ---------- */
+  .note{margin-top:18px; border:1px solid var(--line); border-left:3px solid var(--accent); background:var(--surface); padding:14px 16px;}
+  .note h4{font-size:13px; font-weight:700; color:var(--accent-text); margin-bottom:8px;}
+  .note dl{display:grid; gap:6px; margin:0; border:none;}
+  .note dl div{display:grid; grid-template-columns:70px minmax(0,1fr); gap:12px; padding:0; border:none; font-size:15px;}
+  .note dt{color:var(--text-2);}
+  .note dd{font-weight:500; color:var(--text);}
 
   .map{position:relative; margin-top:48px; aspect-ratio:2/1; max-width:100%; background-color:var(--map-bg);
     background-image:
@@ -304,7 +332,7 @@
 
   /* ---------- responsive ---------- */
   @media (max-width:1000px){
-    .feat, .building-grid, .exp-grid, .about-grid, .contact-grid{grid-template-columns:minmax(0,1fr);}
+    .hero-top, .feat, .building-grid, .exp-grid, .about-grid, .contact-grid{grid-template-columns:minmax(0,1fr);}
     .feat.flip .feat-media{order:0;}
     .grid{grid-template-columns:repeat(2, minmax(0,1fr));}
     .portrait{max-width:340px;}
@@ -358,12 +386,28 @@
 <main id="top">
   <section class="hero">
     <div class="wrap">
-      <p class="role" id="heroRole"></p>
-      <h1 class="display" id="heroName"></h1>
-      <p class="lede" id="heroIntro"></p>
-      <div class="actions">
-        <a class="btn btn-dev" href="#work">See my work</a>
-        <a class="btn" data-cv href="#">Download CV</a>
+      <div class="hero-top">
+        <div>
+          <p class="role" id="heroRole"></p>
+          <h1 class="display" id="heroName"></h1>
+          <p class="lede" id="heroIntro"></p>
+          <div class="actions">
+            <a class="btn btn-dev" href="#work">See my work</a>
+            <a class="btn" data-cv href="#">Download CV</a>
+          </div>
+        </div>
+        <figure class="reel" id="reel" aria-roledescription="carousel" aria-label="Project reel">
+          <div class="reel-stage" id="reelStage"></div>
+          <figcaption class="reel-bar">
+            <span class="reel-label" id="reelLabel" aria-live="polite"></span>
+            <span class="reel-count" id="reelCount"></span>
+            <button class="reel-btn" id="reelPrev" type="button" aria-label="Previous slide">‹</button>
+            <button class="reel-btn" id="reelToggle" type="button" aria-label="Pause reel">❚❚</button>
+            <button class="reel-btn" id="reelNext" type="button" aria-label="Next slide">›</button>
+          </figcaption>
+          <div class="reel-progress" aria-hidden="true"><i id="reelProgress"></i></div>
+          <a class="reel-video link" id="reelVideo" target="_blank" rel="noopener"></a>
+        </figure>
       </div>
 
       <div class="map" id="map" aria-label="My three strongest projects">
@@ -487,7 +531,11 @@ const large = src => src.replace(/-g?thumb\.webp$/, ".webp");
 const img = (src, alt, opts = "", size = "small") => `<img src="${esc(size === "large" ? large(src) : small(src))}" data-full="${esc(src)}" alt="${esc(alt)}" ${opts} onerror="if(this.src.indexOf(this.dataset.full)<0){this.src=this.dataset.full}">`;
 const bullets = s => String(s || "").split(/\n|(?<=\.)\s+(?=[A-Z])/).map(x => x.trim()).filter(Boolean).map(x => x.replace(/\.$/, ""));
 const paras = s => String(s || "").split(/\n\s*\n/).map(x => `<p>${esc(x.trim())}</p>`).join("");
-const metaLine = p => [p.kind, p.context, p.year].filter(Boolean).map(esc).join(" · ");
+const noteHTML = n => `<div class="note"><h4>Design iteration</h4><dl>
+  <div><dt>Problem</dt><dd>${esc(n.problem)}</dd></div>
+  <div><dt>Change</dt><dd>${esc(n.change)}</dd></div>
+  <div><dt>Result</dt><dd>${esc(n.result)}</dd></div></dl></div>`;
+const metaLine = p =>[p.kind, p.context, p.year].filter(Boolean).map(esc).join(" · ");
 
 /* ---------- basics ---------- */
 document.title = `${S.name} | ${S.role}`;
@@ -507,6 +555,47 @@ document.querySelector("#map .pin.exit").insertAdjacentHTML("beforebegin", S.fea
     ${img(p.cover, "")}<span class="tag"><b>${esc(p.title)}</b><i>${esc(p.short)}</i></span></button>`;
 }).join(""));
 $("mapNote").textContent = S.mapNote;
+
+/* ---------- reel ---------- */
+(function reel(){
+  const slides = S.reel || [], stage = $("reelStage");
+  if(!slides.length){ $("reel").hidden = true; return; }
+  const still = matchMedia("(prefers-reduced-motion:reduce)").matches, DUR = 4500;
+  stage.innerHTML = slides.map((s, i) => `<button class="reel-slide${i ? "" : " on"}" type="button" data-i="${i}" aria-label="${esc(s.label)}: open project">
+    <img ${i ? 'data-src' : 'src'}="${esc(s.src)}" alt="${esc(s.label)}"></button>`).join("");
+  const els = [...stage.children], bar = $("reelProgress");
+  let idx = 0, playing = !still, timer = null, t0 = 0;
+  const load = i => { const im = els[i].querySelector("img"); if(im.dataset.src){ im.src = im.dataset.src; im.removeAttribute("data-src"); } };
+  function show(i){
+    idx = (i + slides.length) % slides.length;
+    els.forEach((el, k) => el.classList.toggle("on", k === idx));
+    load(idx); load((idx + 1) % slides.length);
+    $("reelLabel").textContent = slides[idx].label;
+    $("reelCount").textContent = `${idx + 1} / ${slides.length}`;
+    t0 = performance.now();
+  }
+  function tick(now){
+    if(playing){
+      const f = Math.min(1, (now - t0) / DUR); bar.style.width = (f * 100) + "%";
+      if(f >= 1) show(idx + 1);
+    }
+    timer = requestAnimationFrame(tick);
+  }
+  function setPlaying(p){ playing = p; $("reelToggle").textContent = p ? "❚❚" : "▶"; $("reelToggle").setAttribute("aria-label", p ? "Pause reel" : "Play reel"); if(p) t0 = performance.now() - (parseFloat(bar.style.width) || 0) / 100 * DUR; }
+  $("reelPrev").addEventListener("click", () => { show(idx - 1); bar.style.width = "0"; });
+  $("reelNext").addEventListener("click", () => { show(idx + 1); bar.style.width = "0"; });
+  $("reelToggle").addEventListener("click", () => setPlaying(!playing));
+  stage.addEventListener("click", e => {
+    const s = slides[+e.target.closest(".reel-slide").dataset.i];
+    if(s.project === "building") $("building").scrollIntoView({ behavior: still ? "auto" : "smooth" });
+    else if(bySlug(s.project)) openCase(s.project);
+  });
+  // Pause while the reel is off screen or the tab is hidden, so it never runs unseen.
+  new IntersectionObserver(([en]) => { if(!en.isIntersecting && playing) { setPlaying(false); stage.dataset.autopaused = "1"; }
+    else if(en.isIntersecting && stage.dataset.autopaused){ delete stage.dataset.autopaused; setPlaying(true); } }).observe(stage);
+  show(0); setPlaying(playing); if(still) bar.style.width = "0"; requestAnimationFrame(tick);
+  if(S.reelVideo && S.reelVideo.url){ $("reelVideo").href = S.reelVideo.url; $("reelVideo").textContent = `▶ ${S.reelVideo.label}`; } else $("reelVideo").hidden = true;
+})();
 
 /* ---------- featured rows ---------- */
 function stripHTML(p){
@@ -537,7 +626,7 @@ $("featured").innerHTML = S.featured.map((slug, i) => {
         ${p.genre ? `<div><dt>Genre</dt><dd>${esc(p.genre)}</dd></div>` : ""}
         ${p.timeline ? `<div><dt>Timeline</dt><dd>${esc(p.timeline)}</dd></div>` : ""}
       </dl>
-      <ul class="did">${bullets(p.whatIDid).slice(0, 3).map(b => `<li>${esc(b)}</li>`).join("")}</ul>
+      ${p.designNote ? noteHTML(p.designNote) : `<ul class="did">${bullets(p.whatIDid).slice(0, 3).map(b => `<li>${esc(b)}</li>`).join("")}</ul>`}
       <div class="feat-actions"><button class="btn btn-dev" data-open="${esc(p.slug)}">Open case study</button>${actionLinks(p)}</div>
     </div>
   </article>`;
@@ -654,6 +743,7 @@ function openCase(slug, push = true){
     ${p.process.length ? stripHTML(p) : ""}
     <div class="text">
       ${p.overview ? `<section class="full"><h3>Overview</h3>${paras(p.overview)}</section>` : ""}
+      ${p.designNote ? `<section class="full">${noteHTML(p.designNote)}</section>` : ""}
       ${p.whatIDid ? `<section class="full"><h3>What I did</h3><ul class="did">${bullets(p.whatIDid).map(b => `<li>${esc(b)}</li>`).join("")}</ul></section>` : ""}
       ${p.challenges ? `<section><h3>Challenges</h3>${paras(p.challenges)}</section>` : ""}
       ${p.lessons ? `<section><h3>What I learned</h3>${paras(p.lessons)}</section>` : ""}

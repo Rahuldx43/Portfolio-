@@ -30,6 +30,22 @@ window.SITE = {
   featured: ["the-broken-camp", "knight-fight", "gauntlet-mania"],
   mapNote: "My three strongest projects. Click a room to open the full design breakdown.",
 
+  /* ---------- Reel at the top of the page ----------
+     Slides play in this order. "project" is the slug of the project that opens when the
+     slide is clicked (use "building" for Hospital Escape). */
+  reel: [
+    { src: "images/b4500d9d8890abf1.webp", label: "The Broken Camp: greybox", project: "the-broken-camp" },
+    { src: "images/7f3613919b99f01b.webp", label: "The Broken Camp: final", project: "the-broken-camp" },
+    { src: "images/99c7067a33d68eed.webp", label: "Knight Fight", project: "knight-fight" },
+    { src: "images/059f8a61fc40e0ae.webp", label: "Gauntlet Mania", project: "gauntlet-mania" },
+    { src: "images/d5d93b01f685b667.webp", label: "Nightclub Fight Arena", project: "nightclub-fight-arena" },
+    { src: "images/b5e3e529ca00fb87.webp", label: "Boss Arena", project: "boss-arena" },
+    { src: "images/4452a63e8562e986.webp", label: "Forgotten Temple", project: "forgotten-temple" },
+    { src: "images/cfb7f3449e016684.webp", label: "Hospital Escape: in development", project: "building" },
+  ],
+  // The video linked under the reel.
+  reelVideo: { label: "Watch The Broken Camp gameplay", url: "https://youtu.be/48gaFhpSrlk" },
+
   /* ---------- Currently building ---------- */
   building: {
     title: "Hospital Escape",
@@ -118,6 +134,7 @@ window.SITE = {
      timeline / genre   shown in the case study
      desc       2 to 3 sentences shown on the card
      overview, whatIDid, challenges, lessons   case study text.
+     designNote optional problem / change / result from playtesting, shown on featured projects
                 In whatIDid, each sentence becomes one bullet point.
      cover      main image
      process    optional "greybox to final" images, each with a label
@@ -146,6 +163,11 @@ window.SITE = {
       "whatIDid": "Designed the level from concept art to final playable environment. Created the initial blockout and refined gameplay flow. Built gameplay systems using Blueprints. Developed enemy AI and combat encounters. Refined enemy placement, combat pacing, and player progression. Built the environment using Fab Marketplace assets. Created in-game cinematics using Unreal Sequencer. Tested, debugged and optimised the project for the final build.",
       "challenges": "One of the biggest challenges was refining the enemy AI while new gameplay features were still being added. I spent a lot of time testing combat encounters, adjusting enemy placement, patrol routes, and behaviour to improve the overall flow of each mission. As the project grew, debugging Blueprint systems and fixing issues between interconnected mechanics became a regular part of development, helping me build a more stable and organised project.",
       "lessons": "This project gave me a much better understanding of how gameplay systems, AI, level design, and player progression work together. It also improved my Blueprint workflow, problem-solving, and level iteration process. During development, I also learned the fundamentals of Unreal Engine Sequencer, which helped me present gameplay moments and support the overall pacing of the project.",
+    "designNote": {
+      "problem": "Combat encounters needed better mission flow while new gameplay features were still being added.",
+      "change": "Tested each encounter and adjusted enemy placement, patrol routes and AI behaviour.",
+      "result": "Smoother flow through each mission, and a more stable, organised project by the final build."
+    },
       "cover": "images/aee7f4ea353fdfc4.webp",
       "process": [
         {
@@ -200,6 +222,11 @@ window.SITE = {
       "whatIDid": "Designed the Victorian mansion level from the initial blockout to the final gameplay layout.\nImplemented gameplay systems using Unreal Engine Blueprints.\nDeveloped the ragdoll system and integrated it with gameplay interactions.\nBuilt environmental hazards including flame traps, spike traps, oil hazards, and health pickups.\nDesigned and implemented the dynamic local multiplayer camera.\nCompleted level set dressing using assets created by the 3D artist.\nCreated the final lighting and post-processing to establish the Victorian atmosphere.\nBalanced player flow, trap placement, and gameplay spaces through iteration and testing.",
       "challenges": "One of the biggest challenges was creating a level that stayed fun while supporting four-player local multiplayer. The camera, trap placement, and health pickup locations went through several iterations to keep the gameplay readable without reducing the chaotic feel.\n\nAnother challenge was working with limited concept art during development. Since there were very few visual sketches available, we relied on Victorian mansion references, gameplay references, and existing asset packs to guide the level design and environment.",
       "lessons": "This was my first collaborative university project, and it gave me a much better understanding of how different disciplines come together during game development. Working closely with artists and programmers taught me the importance of communication, planning, and iteration. It also helped me improve my skills in level design, Blueprint gameplay systems, lighting, set dressing, and designing spaces around multiplayer gameplay.",
+    "designNote": {
+      "problem": "Four-player local matches had to stay readable without losing their chaotic feel.",
+      "change": "Iterated the shared camera, trap placement and health pickup locations several times through testing.",
+      "result": "Short, chaotic matches where players can still follow the action and the mansion itself is a threat."
+    },
       "cover": "images/99c7067a33d68eed-thumb.webp",
       "process": [
         {
@@ -378,6 +405,11 @@ window.SITE = {
       "whatIDid": "Designed and implemented the combat system using Blueprints. Created directional punch and kick attacks. Developed the enemy spawning system and random attack behaviour. Implemented cinematic finishers with dynamic camera transitions. Added combat feedback, including Niagara effects, hit stop, camera shake, and sound effects. Built the Start Menu, Game Over screen, timer, score system, and overall game flow. Dressed the arena level using modular assets and added a crowd system to improve the atmosphere.",
       "challenges": "One of the biggest challenges was making the combat feel responsive. Although the mechanics worked, the attacks initially lacked impact. To improve this, I layered different feedback systems such as hit stop, camera shake, Niagara effects, and sound effects. I also adjusted the timing of each element through playtesting until the combat felt more responsive and consistent.",
       "lessons": "This project helped me understand how much small details contribute to the overall player experience. I gained practical experience building gameplay systems in Blueprints, balancing combat through iteration, and using visual and audio feedback to support gameplay rather than simply decorate it. It also reinforced the importance of regular playtesting and making small improvements throughout development instead of waiting until the end.",
+    "designNote": {
+      "problem": "The attacks worked, but they lacked impact.",
+      "change": "Layered hit stop, camera shake, Niagara effects and sound, then tuned the timing of each through playtesting.",
+      "result": "Combat that feels more responsive and consistent."
+    },
       "cover": "images/059f8a61fc40e0ae-thumb.webp",
       "process": [],
       "gallery": [
