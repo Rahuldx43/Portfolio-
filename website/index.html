@@ -86,14 +86,9 @@
 
   /* ---------- hero ---------- */
   .hero{padding:60px 0 56px;}
-  .hero-top{display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,1fr); gap:24px 56px; align-items:end;}
   .hero .role{font-variation-settings:var(--wide); font-weight:750; font-size:clamp(20px, 2.2vw, 28px); color:var(--accent-text); margin-bottom:14px;}
-  .hero h1{font-size:clamp(48px, 7.4vw, 106px);}
+  .hero h1{font-size:clamp(50px, 8.6vw, 124px);}
   .hero .lede{margin-top:20px;}
-  .facts{display:grid; gap:0; border-top:1px solid var(--line);}
-  .facts div{display:grid; grid-template-columns:100px minmax(0,1fr); gap:16px; padding:11px 0; border-bottom:1px solid var(--line); font-size:15px;}
-  .facts dt{color:var(--text-2);}
-  .facts dd{font-weight:600;}
   .hero .actions{display:flex; flex-wrap:wrap; gap:12px; margin-top:28px;}
 
   .map{position:relative; margin-top:48px; aspect-ratio:2/1; max-width:100%; background-color:var(--map-bg);
@@ -120,7 +115,7 @@
   .map-note{margin-top:12px; font-size:14px; color:var(--text-2);}
 
   /* ---------- featured work ---------- */
-  .work{padding:96px 0 32px; border-top:1px solid var(--line);}
+  .work{padding:96px 0 32px;}
   .feat{display:grid; grid-template-columns:minmax(0,7fr) minmax(0,5fr); gap:28px 48px; align-items:start; padding:44px 0; border-top:1px solid var(--line);}
   .feat:first-of-type{border-top:none; padding-top:8px;}
   .feat.flip .feat-media{order:2;}
@@ -174,7 +169,7 @@
   .card.wide img{aspect-ratio:33/10;}
 
   /* ---------- currently building ---------- */
-  .building{background:var(--band); border-top:2px solid var(--band-line); border-bottom:2px solid var(--band-line); padding:80px 0; margin-top:72px;}
+  .building{background:var(--band); border-top:2px solid var(--band-line); border-bottom:2px solid var(--band-line); padding:80px 0;}
   .building-grid{display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); gap:48px; align-items:center;}
   .building .cover{display:block; width:100%; border:2px solid var(--edge); padding:0; background:#000; box-shadow:10px 10px 0 var(--shadow);}
   .status{display:inline-flex; align-items:center; gap:10px; font-weight:650; font-size:15px; margin-bottom:12px;}
@@ -291,7 +286,7 @@
 
   /* ---------- responsive ---------- */
   @media (max-width:1000px){
-    .hero-top, .feat, .building-grid, .exp-grid, .about-grid, .contact-grid{grid-template-columns:minmax(0,1fr);}
+    .feat, .building-grid, .exp-grid, .about-grid, .contact-grid{grid-template-columns:minmax(0,1fr);}
     .feat.flip .feat-media{order:0;}
     .grid{grid-template-columns:repeat(2, minmax(0,1fr));}
     .portrait{max-width:340px;}
@@ -315,7 +310,6 @@
     .grid{grid-template-columns:minmax(0,1fr);}
     .shots{grid-template-columns:repeat(2, minmax(0,1fr));}
     .timeline li{grid-template-columns:minmax(0,1fr); gap:4px;}
-    .facts div{grid-template-columns:84px minmax(0,1fr);}
     .case .text{grid-template-columns:minmax(0,1fr);}
     .lb-inner{padding:56px 8px;}
   }
@@ -329,8 +323,8 @@
     <a class="brand" href="#top" id="brand"></a>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
     <ul class="nav" id="nav">
-      <li><a href="#work">Work</a></li>
       <li><a href="#building">Hospital Escape</a></li>
+      <li><a href="#work">Work</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -346,17 +340,12 @@
 <main id="top">
   <section class="hero">
     <div class="wrap">
-      <div class="hero-top">
-        <div>
-          <p class="role" id="heroRole"></p>
-          <h1 class="display" id="heroName"></h1>
-          <p class="lede" id="heroIntro"></p>
-          <div class="actions">
-            <a class="btn btn-dev" href="#work">See my work</a>
-            <a class="btn" data-cv href="#">Download CV</a>
-          </div>
-        </div>
-        <dl class="facts" id="heroFacts"></dl>
+      <p class="role" id="heroRole"></p>
+      <h1 class="display" id="heroName"></h1>
+      <p class="lede" id="heroIntro"></p>
+      <div class="actions">
+        <a class="btn btn-dev" href="#work">See my work</a>
+        <a class="btn" data-cv href="#">Download CV</a>
       </div>
 
       <div class="map" id="map" aria-label="My three strongest projects">
@@ -368,6 +357,19 @@
       </div>
       <p class="map-note" id="mapNote"></p>
     </div>
+  </section>
+
+  <section class="building" id="building">
+    <div class="wrap building-grid">
+      <button class="cover" data-lightbox="building" data-index="0" id="buildCover" aria-label="Enlarge cover art"></button>
+      <div>
+        <div class="status" id="buildStatus"></div>
+        <h2 class="display" id="buildTitle"></h2>
+        <p class="lede" id="buildPitch"></p>
+        <dl id="buildDetails"></dl>
+      </div>
+    </div>
+    <div class="wrap"><div class="shots" id="buildShots"></div></div>
   </section>
 
   <section class="work" id="work">
@@ -389,19 +391,6 @@
         <div class="grid" id="grid"></div>
       </div>
     </div>
-  </section>
-
-  <section class="building" id="building">
-    <div class="wrap building-grid">
-      <button class="cover" data-lightbox="building" data-index="0" id="buildCover" aria-label="Enlarge cover art"></button>
-      <div>
-        <div class="status" id="buildStatus"></div>
-        <h2 class="display" id="buildTitle"></h2>
-        <p class="lede" id="buildPitch"></p>
-        <dl id="buildDetails"></dl>
-      </div>
-    </div>
-    <div class="wrap"><div class="shots" id="buildShots"></div></div>
   </section>
 
   <section class="experience" id="experience">
@@ -431,9 +420,10 @@
       <h2 class="display" id="contactHeading"></h2>
       <p class="lede" id="contactText"></p>
       <div class="contact-grid">
-        <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
-          <input type="hidden" name="form-name" value="contact">
-          <label class="hp">Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+          <input type="hidden" name="access_key" id="formKey">
+          <input type="hidden" name="from_name" value="Portfolio contact form">
+          <label class="hp">Leave this empty <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label>
           <label for="f-name">Name <input id="f-name" name="name" required autocomplete="name"></label>
           <label for="f-email">Email <input id="f-email" name="email" type="email" required autocomplete="email"></label>
           <label for="f-subject">Subject <input id="f-subject" name="subject" required></label>
@@ -488,7 +478,6 @@ $("brand").innerHTML = `${esc(first)} <span>${esc(rest.join(" "))}</span>`;
 $("heroRole").textContent = `${S.role}, ${S.engine}`;
 $("heroName").innerHTML = `${esc(first)}<br>${esc(rest.join(" "))}`;
 $("heroIntro").textContent = S.intro;
-$("heroFacts").innerHTML = S.facts.map(f => `<div><dt>${esc(f.label)}</dt><dd>${esc(f.value)}</dd></div>`).join("");
 document.querySelectorAll("[data-cv]").forEach(a => { a.href = S.cvFile; a.setAttribute("download", S.cvFile); });
 $("footName").textContent = `© ${new Date().getFullYear()} ${S.name}, ${S.role.toLowerCase()}.`;
 
@@ -696,8 +685,9 @@ const menuBtn = $("menuBtn"), nav = $("nav");
 menuBtn.addEventListener("click", () => { const open = nav.classList.toggle("open"); menuBtn.setAttribute("aria-expanded", open); });
 nav.addEventListener("click", e => { if(e.target.closest("a")){ nav.classList.remove("open"); menuBtn.setAttribute("aria-expanded", "false"); } });
 
-/* ---------- contact form (Netlify Forms; the hidden copy in forms.html lets Netlify detect it) ---------- */
+/* ---------- contact form (Web3Forms: messages are emailed to Rahul) ---------- */
 const form = $("contactForm"), msg = $("formMsg");
+$("formKey").value = C.formKey;
 form.addEventListener("submit", async e => {
   e.preventDefault();
   const bad = [...form.querySelectorAll("[required]")].find(f => !f.value.trim() || (f.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value.trim())));
@@ -705,8 +695,12 @@ form.addEventListener("submit", async e => {
   const btn = form.querySelector('[type="submit"]'); btn.disabled = true;
   msg.className = "form-msg"; msg.textContent = "Sending…";
   try{
-    const res = await fetch("/", { method:"POST", headers:{"Content-Type":"application/x-www-form-urlencoded"}, body:new URLSearchParams(new FormData(form)).toString() });
-    if(!res.ok) throw new Error(res.status);
+    const data = Object.fromEntries(new FormData(form));
+    data.botcheck = form.botcheck.checked;
+    data.subject = `Portfolio: ${data.subject}`;
+    const res = await fetch("https://api.web3forms.com/submit", { method:"POST", headers:{"Content-Type":"application/json", "Accept":"application/json"}, body:JSON.stringify(data) });
+    const out = await res.json().catch(() => ({}));
+    if(!res.ok || !out.success) throw new Error(out.message || res.status);
     form.reset(); msg.className = "form-msg ok"; msg.textContent = "Message sent. I'll reply by email soon.";
   }catch(err){
     msg.className = "form-msg err"; msg.textContent = `The message didn't send. Email me directly at ${C.email}.`;

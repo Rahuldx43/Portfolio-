@@ -8,7 +8,6 @@ website/
   content.js                 ALL the text, projects and links (edit this one)
   images/                    every picture on the site
   Rahul_Pranasseri_CV.pdf    the CV visitors download
-  forms.html                 lets Netlify detect the contact form (leave it alone)
 ```
 
 ## Change any text
@@ -52,17 +51,14 @@ Put the new PDF in the `website` folder. If its name is different, change `cvFil
 
 The site updates within a few seconds.
 
-## Make the contact form deliver messages (one-time setup)
+## Contact form (Web3Forms)
 
-The form uses Netlify Forms, which is free for up to 100 messages a month. Netlify needs two settings switched on once:
+The contact form sends every message to the email address you signed up to Web3Forms with. Nothing needs setting up in Netlify.
 
-1. In Netlify, open your site, then **Forms** in the left menu (on some layouts it is under **Project configuration → Forms**).
-   If you see **Enable form detection**, click it.
-2. Upload the `website` folder again (the step above), so Netlify finds the form.
-3. Back in **Forms**, open **Form notifications → Add notification → Email notification**.
-   Choose the form **contact** and enter your email address.
-
-Every message now arrives in your inbox, and you can also read them all under **Forms** in Netlify. The form cannot send from your own computer (double-clicking `index.html`); it only works on the live Netlify site.
+- The form key is `formKey:` in the `contact` part of `content.js`. If you create a new key on web3forms.com, paste it there.
+- The email subject reads "Portfolio: " followed by the subject the visitor typed.
+- Web3Forms' free plan has a monthly message limit; your Web3Forms dashboard shows it and your past messages.
+- Send yourself one test message after the site goes live to check it arrives (look in spam the first time).
 
 ## Analytics (Cloudflare)
 

@@ -20,14 +20,6 @@ window.SITE = {
   engine: "Unreal Engine 5",
   intro: "I design levels, combat encounters and gameplay systems, then build them myself in Unreal Engine 5, from the first greybox to the final lighting pass.",
 
-  // The four short facts under the intro at the top of the page.
-  facts: [
-    { label: "Studying", value: "MSc Computer Game Design, Staffordshire University (finishing Aug 2026)" },
-    { label: "Studio", value: "Level designer at O-Sens Studio, 2024 to 2025" },
-    { label: "Freelance", value: "Unreal Engine work for international clients since 2023" },
-    { label: "Based in", value: "Stoke-on-Trent, UK. Open to remote." },
-  ],
-
   // Your CV. Put the PDF in the website folder and write its file name here.
   cvFile: "Rahul_Pranasseri_CV.pdf",
 
@@ -61,7 +53,7 @@ window.SITE = {
   portrait: "images/19e176633ca57739.webp",
   about: [
     "I'm a game designer based in Stoke-on-Trent, UK. I work in Unreal Engine 5, where I design levels, combat encounters and gameplay systems, build them with Blueprints, and optimise them so they run well.",
-    "I'm finishing an MSc in Computer Game Design at Staffordshire University in August 2026. I found game development while studying for a B.Tech in Computer Science with Big Data Analytics in India, then taught myself Unreal Engine through personal projects before working at O-Sens Studio and freelancing for clients around the world.",
+    "I graduated with an MSc in Computer Game Design from Staffordshire University in September 2026. I found game development while studying for a B.Tech in Computer Science with Big Data Analytics in India, then taught myself Unreal Engine through personal projects before working at O-Sens Studio and freelancing for clients around the world.",
     "I'm looking for a full-time game design or level design role, and I'm open to freelance work.",
   ],
   stats: [
@@ -74,7 +66,7 @@ window.SITE = {
   /* ---------- Experience and education (newest first) ---------- */
   experience: [
     { date: "2025 - 2026", role: "MSc Computer Game Design", org: "Staffordshire University, UK",
-      desc: "Postgraduate study in game design, prototyping, gameplay systems and professional practice, with hands-on level design and environment work." },
+      desc: "Graduated September 2026. Postgraduate study in game design, prototyping, gameplay systems and professional practice, with hands-on level design and environment work." },
     { date: "Aug 2025", role: "Paid research study", org: "Meta",
       desc: "Built a working game prototype in Roblox Studio with AI tools inside a two-hour research task, compared it with Unreal Engine for rapid prototyping, and gave structured feedback for Meta's research on AI-assisted game development." },
     { date: "Aug 2024 - Sep 2025", role: "Level Designer, Unreal Engine Game Developer", org: "O-Sens Studio",
@@ -105,6 +97,9 @@ window.SITE = {
     location: "Stoke-on-Trent, UK. Open to remote.",
     lookingFor: "Full-time game design and level design roles, plus freelance work",
     linkedin: "https://www.linkedin.com/in/rahuldx/",
+    // Web3Forms access key. Contact form messages are emailed to the address
+    // you signed up to Web3Forms with. This key is meant to be public.
+    formKey: "f29b686e-8246-4a9c-976f-f3034d3060b0",
   },
 
   /* ---------- Projects ----------
