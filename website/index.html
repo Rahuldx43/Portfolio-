@@ -41,8 +41,8 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=JetBrains+Mono:wght@500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=JetBrains+Mono:wght@500&display=swap"></noscript>
 <!-- All text and images come from content.js. Edit that file, not this one. -->
-<script src="content.js"></script>
-<script src="image-sizes.js"></script>
+<link rel="preload" href="content.js" as="script">
+<link rel="preload" href="image-sizes.js" as="script">
 <style>
   /* Layout idea: a level designer's blockout sheet. Greybox grid, orange path, rooms you can enter. */
   :root{
@@ -456,6 +456,8 @@
   </div>
 </header>
 
+<script src="content.js"></script>
+<script src="image-sizes.js"></script>
 <main id="top">
   <section class="hero">
     <div class="wrap">
@@ -890,8 +892,7 @@ if(bySlug(location.hash.slice(1))) openCase(location.hash.slice(1), false);
 if(S.showreel && S.showreel.file){
   const btn = $("showreelBtn"), dlg = $("showreelDialog"), vid = $("showreelVideo");
   btn.hidden = false; btn.textContent = `▶ ${S.showreel.label || "Watch showreel"}`;
-  if(S.showreel.poster) vid.poster = S.showreel.poster;
-  btn.addEventListener("click", () => { if(!vid.src) vid.src = S.showreel.file; dlg.showModal(); vid.play().catch(() => {}); });
+  btn.addEventListener("click", () => { if(!vid.src){ if(S.showreel.poster) vid.poster = S.showreel.poster; vid.src = S.showreel.file; } dlg.showModal(); vid.play().catch(() => {}); });
   $("showreelClose").addEventListener("click", () => dlg.close());
   dlg.addEventListener("click", e => { if(e.target === dlg) dlg.close(); });
   dlg.addEventListener("close", () => vid.pause());
