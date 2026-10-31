@@ -6,6 +6,8 @@
 <title>Rahul Pranasseri | Game Designer</title>
 <meta name="description" content="Rahul Pranasseri, game designer working in Unreal Engine 5. Levels, combat encounters and gameplay systems, designed and built from the first greybox to the final lighting pass.">
 <meta name="theme-color" content="#101317">
+<!-- YouTube embeds need to know which site they are on (otherwise "Error 153"). -->
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <script>
   /* Theme: dark by default. A visitor's choice is remembered. Runs before paint so the page never flashes. */
   (function () { var t = 'dark'; try { t = localStorage.getItem('rp-theme') || 'dark'; } catch (e) {}
@@ -672,7 +674,12 @@ caseDialog.addEventListener("close", () => {
 $("caseClose").addEventListener("click", closeCase);
 caseDialog.addEventListener("click", e => {
   const yt = e.target.closest("[data-yt]");
-  if(yt) yt.parentElement.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${yt.dataset.yt}?autoplay=1&rel=0" title="Project video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
+  if(!yt) return;
+  // A page opened straight from the computer (file://) has no web address, so YouTube refuses
+  // to play it embedded (Error 153). There, open the video on YouTube instead.
+  if(location.protocol === "file:"){ window.open(`https://www.youtube.com/watch?v=${yt.dataset.yt}`, "_blank", "noopener"); return; }
+  const origin = encodeURIComponent(location.origin);
+  yt.parentElement.innerHTML = `<iframe src="https://www.youtube.com/embed/${yt.dataset.yt}?autoplay=1&rel=0&playsinline=1&origin=${origin}" title="Project video" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
 });
 document.addEventListener("click", e => {
   const o = e.target.closest("[data-open]"); if(o){ openCase(o.dataset.open); return; }
