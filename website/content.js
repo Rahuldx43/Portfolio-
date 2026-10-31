@@ -46,7 +46,8 @@ window.SITE = {
     { src: "images/cfb7f3449e016684.webp", label: "Hospital Escape: in development", project: "building" },
   ],
   // The video linked under the reel.
-  reelVideo: { label: "Watch The Broken Camp gameplay", url: "https://youtu.be/48gaFhpSrlk" },
+  // Optional link under the reel, e.g. { label: "Watch gameplay", url: "https://..." }. null hides it.
+  reelVideo: null,
   // The showreel video opened by the "Watch showreel" button. To use a new video, put the .mp4
   // in the website folder and change "file". Delete these lines to hide the button.
   showreel: { file: "showreel.mp4", poster: "images/showreel-poster.jpg", label: "Watch showreel" },
@@ -152,6 +153,7 @@ window.SITE = {
      play       link to play the game or ""
      playLabel  button text for the play link
      designDoc  link to the design document or ""
+     moreLinks  optional extra links, e.g. [{ "label": "Watch the greybox", "url": "https://..." }]
   */
   projects: [
     {
@@ -295,7 +297,8 @@ window.SITE = {
         "Gameplay & AI design",
         "Playtesting"
       ],
-      "video": "https://youtu.be/48gaFhpSrlk",
+      "video": "https://youtu.be/wEFuCUPaQoA",
+    "moreLinks": [{ "label": "Watch the greybox", "url": "https://youtu.be/48gaFhpSrlk" }],
       "play": "",
       "playLabel": "",
       "designDoc": "https://drive.google.com/file/d/1M7mZlCA4g2_XOpMwkfhBuRxLg9aw2W10/view?usp=sharing"
@@ -518,6 +521,7 @@ window.SITE = {
         "Game feel"
       ],
       "video": "https://youtu.be/faKVibi0Jt0",
+    "moreLinks": [{ "label": "Combat system prototype", "url": "https://youtu.be/awSc4D_u0qY" }],
       "play": "https://rahulachu.itch.io/gauntlet-mania",
       "playLabel": "Play the game",
       "designDoc": "https://drive.google.com/file/d/1HmBPqGsw4p4Q1MX0ti97VWWzyzSnVYnp/view?usp=sharing"

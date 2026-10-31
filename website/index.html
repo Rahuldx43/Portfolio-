@@ -708,6 +708,7 @@ function actionLinks(p){
     p.video ? `<a class="link" href="${esc(p.video)}" target="_blank" rel="noopener">Watch gameplay</a>` : "",
     p.play ? `<a class="link" href="${esc(p.play)}" target="_blank" rel="noopener">${esc(p.playLabel || "Play the game")}</a>` : "",
     p.designDoc ? `<a class="link" href="${esc(p.designDoc)}" target="_blank" rel="noopener">Design document</a>` : "",
+    ...(p.moreLinks || []).map(l => `<a class="link" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`),
     p.breakdown ? `<a class="link" href="#${esc(p.slug)}" data-open="${esc(p.slug)}" data-jump="breakdown">Level breakdown</a>` : "",
   ].join("");
 }
@@ -828,6 +829,7 @@ function openCase(slug, push = true){
     p.play ? `<a class="btn btn-dev" href="${esc(p.play)}" target="_blank" rel="noopener">${esc(p.playLabel || "Play the game")}</a>` : "",
     p.video ? `<a class="btn" href="${esc(p.video)}" target="_blank" rel="noopener">Watch on YouTube</a>` : "",
     p.designDoc ? `<a class="btn" href="${esc(p.designDoc)}" target="_blank" rel="noopener">Read the design document</a>` : "",
+    ...(p.moreLinks || []).map(l => `<a class="btn" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`),
   ].join("");
   $("caseBarTitle").textContent = p.title;
   caseBody.innerHTML = `

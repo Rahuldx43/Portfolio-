@@ -49,7 +49,7 @@ These three appear as the rooms on the level map at the top and as the big proje
 
 - `availability:` is the small green "open to work" line. Set it to `""` to hide it.
 - `reel:` is the list of slides in the picture reel next to your name. Each slide has an image, a label and the project it opens.
-- `reelVideo:` is the gameplay link under the reel.
+- `reelVideo:` is an optional link under the reel (currently hidden, because the "Watch showreel" button covers it).
 - `showreel:` is the video behind the "Watch showreel" button (see below).
 
 ## Design notes on featured projects
