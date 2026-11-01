@@ -30,7 +30,7 @@ window.SITE = {
      featured projects in the Work section. Use the "slug" of a project from
      the projects list at the bottom of this file. */
   featured: ["the-broken-camp", "knight-fight", "gauntlet-mania"],
-  mapNote: "My three strongest projects. Click a room to open the full design breakdown.",
+  mapNote: "My three strongest projects. Click or tap a room to open the full design breakdown.",
 
   /* ---------- Reel at the top of the page ----------
      Slides play in this order. "project" is the slug of the project that opens when the
@@ -75,7 +75,7 @@ window.SITE = {
   portrait: "images/19e176633ca57739.webp",
   about: [
     "I'm a game designer based in Stoke-on-Trent, UK. I work in Unreal Engine 5, where I design levels, combat encounters and gameplay systems, build them with Blueprints, and optimise them so they run well.",
-    "I graduated from Staffordshire University in September 2026 with an MSc in Computer Games Design (Merit). I found game development while studying for a B.Tech in Computer Science with Big Data Analytics in India, then taught myself Unreal Engine through personal projects before working at O-Sens Studio and freelancing for clients around the world.",
+    "I graduated from Staffordshire University in September 2026 with an MSc in Computer Games Design (Merit). I found game development while studying for a B.Tech in Computer Science with Big Data Visualization in India, then taught myself Unreal Engine through personal projects before working at O-Sens Studio and freelancing for clients around the world.",
     "I'm looking for a full-time game design or level design role, and I'm open to freelance work.",
   ],
   stats: [
@@ -168,8 +168,8 @@ window.SITE = {
       "role": "Game Designer, Gameplay Programmer & Level Designer",
       "timeline": "University Final Year Project (2026)",
       "genre": "Single-Player Military Third-Person Shooter",
-      "desc": "Third-person military shooter built solo in Unreal Engine 5.7. Level design centered on player guidance through environmental storytelling, layered combat encounters, and a fully greyboxed-to-final pipeline, built around gameplay systems designed first.",
-      "overview": "This is my Final Year Project and the largest Unreal Engine project I have worked on so far. The goal was to develop a third-person shooter that brings together gameplay programming, level design, AI, mission systems, and environment production into a complete playable experience. The project is now complete, shaped by structured playtesting and multiple rounds of iteration on gameplay, AI behaviour, and level design. Final set dressing, lighting, and optimisation are complete, taking the project from greybox through to a fully realised playable environment",
+      "desc": "Third-person military shooter built solo in Unreal Engine 5.7. Level design centred on player guidance through environmental storytelling, layered combat encounters, and a fully greyboxed-to-final pipeline, built around gameplay systems designed first.",
+      "overview": "This is my Final Year Project and the largest Unreal Engine project I have worked on so far. The goal was to develop a third-person shooter that brings together gameplay programming, level design, AI, mission systems, and environment production into a complete playable experience. The finished project was shaped by structured playtesting and multiple rounds of iteration on gameplay, AI behaviour, and level design, with final set dressing, lighting, and optimisation taking it from greybox through to a fully realised playable environment.",
       "whatIDid": "Designed the level from concept art to final playable environment. Created the initial blockout and refined gameplay flow. Built gameplay systems using Blueprints. Developed enemy AI and combat encounters. Refined enemy placement, combat pacing, and player progression. Built the environment using Fab Marketplace assets. Created in-game cinematics using Unreal Sequencer. Tested, debugged and optimised the project for the final build.",
       "challenges": "One of the biggest challenges was refining the enemy AI while new gameplay features were still being added. I spent a lot of time testing combat encounters, adjusting enemy placement, patrol routes, and behaviour to improve the overall flow of each mission. As the project grew, debugging Blueprint systems and fixing issues between interconnected mechanics became a regular part of development, helping me build a more stable and organised project.",
       "lessons": "This project gave me a much better understanding of how gameplay systems, AI, level design, and player progression work together. It also improved my Blueprint workflow, problem-solving, and level iteration process. During development, I also learned the fundamentals of Unreal Engine Sequencer, which helped me present gameplay moments and support the overall pacing of the project.",
@@ -313,7 +313,7 @@ window.SITE = {
       "context": "University team project",
       "short": "Multiplayer physics brawler",
       "badge": "",
-      "role": "Level Designer & Gameplay Programmer (Collaborative University Project)",
+      "role": "Level Designer & Gameplay Programmer",
       "timeline": "March 2026 to August 2026",
       "genre": "Local Multiplayer Physics-Based Party Brawler",
       "desc": "Knight Fight is a collaborative university project built in Unreal Engine 5. Players battle as ghostly knights inside a Victorian mansion, using traps, health pickups, and ragdoll physics to knock each other out. I worked mainly on the level design, gameplay systems, lighting, and environment setup.",
@@ -383,11 +383,11 @@ window.SITE = {
       "process": [
         {
           "src": "images/903fbbc5d7a7341c.webp",
-          "label": "Greybox"
+          "label": "Greybox, annotated"
         },
         {
           "src": "images/95b8e53190e042d4.webp",
-          "label": "Blockout zones"
+          "label": "Greybox, VIP area"
         },
         {
           "src": "images/d5d93b01f685b667.webp",
@@ -412,7 +412,7 @@ window.SITE = {
         "UE5",
         "Modular assets",
         "Level design",
-        "Optimization"
+        "Optimisation"
       ],
       "video": "",
       "play": "",
@@ -430,7 +430,7 @@ window.SITE = {
       "role": "Gameplay Programmer, Level Designer",
       "timeline": "2024",
       "genre": "Open-World Action",
-      "desc": "The Boys: Ascent was a freelance Unreal Engine 5 project inspired by The Boys. I joined the project to develop Homelander's gameplay systems, optimize the City Sample map, and help with level design where needed. The project has since been completed and shipped.",
+      "desc": "The Boys: Ascent is a freelance Unreal Engine 5 project inspired by The Boys. I joined the project to develop Homelander's gameplay systems, optimise the City Sample map, and help with level design where needed. The project has since been completed and shipped.",
       "overview": "The Boys: Ascent is a freelance Unreal Engine 5 project inspired by The Boys. I joined the project to develop gameplay systems for Homelander, optimise the City Sample map, and support level design where needed. The project gave me the opportunity to work on a large open-world environment while collaborating directly with an international client. It also became my first shipped freelance project, giving me valuable experience working within a real production pipeline.",
       "whatIDid": "Developed Homelander's gameplay systems using Unreal Engine Blueprints. Implemented and refined character mechanics based on client feedback. Optimised the City Sample environment to improve performance. Assisted with level design and environment changes where required. Identified and fixed Blueprint issues throughout development. Worked directly with the client, delivering regular updates and implementing requested changes.",
       "challenges": "The biggest challenge was working with the City Sample project. Its large scale and high asset density affected performance, especially while adding new gameplay features. I spent time profiling the level, removing unnecessary overhead, and optimising the environment so gameplay remained smooth without changing the overall look of the city. Another challenge was developing gameplay systems that matched the client's vision. Regular feedback sessions helped refine the mechanics and improve the overall experience before delivery.",
@@ -447,7 +447,7 @@ window.SITE = {
         "UE5",
         "Blueprints",
         "Level design",
-        "Optimization"
+        "Optimisation"
       ],
       "video": "https://youtu.be/p0xtXNiSvQM",
       "play": "https://discord.com/invite/YX2bxU83St",
@@ -456,7 +456,7 @@ window.SITE = {
     },
     {
       "slug": "echoes-beyond-the-hill",
-      "title": "Echoes Beyond The Hill",
+      "title": "Echoes Beyond the Hills",
       "kind": "Gameplay",
       "year": "",
       "context": "University project",
@@ -466,7 +466,7 @@ window.SITE = {
       "timeline": "4 weeks",
       "genre": "2D Platformer",
       "desc": "A 2D platformer developed in Unreal Engine 5, focusing on level design, Blueprint gameplay systems, and creating a polished gameplay experience.",
-      "overview": "Echoes Beyond The Hill is my first 2D game, created in Unreal Engine 5 as a personal project. I wanted to learn the complete workflow of developing a 2D platformer because I have ideas for a future 2D game of my own. Rather than jumping straight into that project, I used this as an opportunity to understand 2D gameplay, level design, Blueprint systems, and player progression. I also built the environment using modular assets so they could be reused in future projects.",
+      "overview": "Echoes Beyond the Hills is my first 2D game, created in Unreal Engine 5 as a personal project. I wanted to learn the complete workflow of developing a 2D platformer because I have ideas for a future 2D game of my own. Rather than jumping straight into that project, I used this as an opportunity to understand 2D gameplay, level design, Blueprint systems, and player progression. I also built the environment using modular assets so they could be reused in future projects.",
       "whatIDid": "Designed and built the game levels. Developed gameplay systems using Blueprints. Created platforming sections and puzzle mechanics. Implemented player interactions and checkpoints. Tested and refined the gameplay based on feedback. Polished the game before the final submission.",
       "challenges": "Coming from a 3D background, learning how to design for a 2D platformer was a completely different experience. I had to think more carefully about jump distances, player movement, enemy placement, and how each level introduced new mechanics. I also designed the environment using modular pieces so I could quickly make changes and reuse assets without rebuilding sections from scratch.",
       "lessons": "This project gave me a solid understanding of 2D game development and helped me become more confident designing gameplay in a different perspective. It also reinforced the value of planning modular assets early in development, making future levels easier to build and iterate on. Most importantly, it gave me the knowledge and confidence to start developing the 2D game idea I originally wanted to create.",
@@ -540,10 +540,10 @@ window.SITE = {
       "timeline": "2024",
       "genre": "Action • Boss Arena",
       "desc": "A boss combat arena built for an O-Sens Studio game. I took it from blockout to final environment with Quixel Megascans, shaping the space around the encounter while matching the game's visual style.",
-      "overview": "Built for a game at O-Sens Studio. I took a boss combat arena from blockout to final environment using Quixel Megascans, matching the game's visual style while leaving enough room for the team's gameplay systems to actually work.\n\nI owned the level layout, set dressing, and overall composition. The arena went through several rounds of rework as gameplay requirements shifted, which was my first real taste of iterating inside an established studio pipeline rather than on my own.",
+      "overview": "Built for a game at O-Sens Studio. I took a boss combat arena from blockout to final environment using Quixel Megascans, matching the game's visual style while leaving enough room for the team's gameplay systems to actually work.\n\nI owned the level layout, set dressing, and overall composition. The arena went through several rounds of rework as gameplay requirements shifted, which was my first real taste of iterating on a gameplay space inside an established studio pipeline rather than on my own.",
       "whatIDid": "Created the initial blockout for the boss arena.\nBuilt the environment using Quixel Megascans and modular assets.\nCompleted the final set dressing with rocks, ruins, vegetation, and environmental props.\nRefined the arena layout based on gameplay and team feedback.\nWorked with the team to ensure the environment matched the project's visual direction.\nOrganised the level to make future changes and iterations easier.",
       "challenges": "The tension was between dressing the arena to feel finished and keeping it open enough for combat to actually work. Every asset added risked eating into space the gameplay systems needed. Getting the balance right took several passes of asset placement and composition before the layout held up.",
-      "lessons": "First real experience taking a level from blockout to finished environment inside a professional studio, and it built real confidence with composition, set dressing, and Quixel Megascans. Mostly, though, it taught me how much a level can change mid-development, and staying adaptable to designer feedback mattered more than getting it right the first time.",
+      "lessons": "My first gameplay space taken from blockout to finished environment inside a professional studio, and it built real confidence with composition, set dressing, and Quixel Megascans. Mostly, though, it taught me how much a level can change mid-development, and staying adaptable to designer feedback mattered more than getting it right the first time.",
       "cover": "images/b5e3e529ca00fb87-thumb.webp",
       "process": [],
       "gallery": [
