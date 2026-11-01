@@ -81,7 +81,7 @@ window.SITE = {
   stats: [
     { num: "15+", label: "projects completed" },
     { num: "4", label: "years making games" },
-    { num: "5", label: "games released" },
+    { num: "3", label: "games released" },
     { num: "5+", label: "studios and clients" },
   ],
 
